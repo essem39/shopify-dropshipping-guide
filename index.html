@@ -7,6 +7,134 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* -------------------------------------------------------------------------- */
+/* 1. Глобальный сброс и шрифт (Швейцарский дизайн) */
+/* -------------------------------------------------------------------------- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333; /* Более мягкий черный текст */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ffffff; /* Убедимся, что фон чистый белый */
+}
+
+/* Сброс стандартных стилей для заголовков */
+h1, h2, h3, h4 {
+    color: #1a1a1a;
+    font-weight: 600; /* Полужирный, не слишком агрессивный */
+    line-height: 1.2;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2. Навигация и Шапка (Header/Nav) */
+/* -------------------------------------------------------------------------- */
+.header-nav {
+    /* Если у вас есть шапка, сделайте ее чистой и фиксированной */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04); /* Легкая тень для "парения" */
+    padding: 15px 30px;
+}
+
+.logo a {
+    color: #008060; /* Фирменный зеленый Shopify */
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3. Кнопки (Call-to-Action) */
+/* -------------------------------------------------------------------------- */
+.cta-button {
+    /* Общий стиль для всех кнопок */
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border: none;
+}
+
+/* Основная кнопка (Primary Button - Зеленая) */
+.cta-button.primary {
+    background-color: #008060; /* Shopify Green */
+    color: white;
+}
+
+.cta-button.primary:hover {
+    background-color: #006b52;
+    box-shadow: 0 4px 8px rgba(0, 128, 96, 0.3);
+}
+
+/* Второстепенная кнопка (Secondary Button - Белая/Прозрачная) */
+.cta-button.secondary {
+    background-color: transparent;
+    color: #008060;
+    border: 2px solid #008060;
+}
+
+.cta-button.secondary:hover {
+    background-color: #008060;
+    color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4. Секции и Контейнеры */
+/* -------------------------------------------------------------------------- */
+.container {
+    max-width: 1100px; /* Ограничивает ширину контента */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Общий стиль для всех секций */
+section {
+    padding: 80px 0;
+}
+/* -------------------------------------------------------------------------- */
+/* 5. Улучшения Футера (Footer) */
+/* -------------------------------------------------------------------------- */
+footer {
+    background-color: #1a1a1a; /* Темный фон для контраста */
+    color: #f8f8f8;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+footer h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+}
         /* Base Styles */
         :root {
             --shopify-green: #008060;
