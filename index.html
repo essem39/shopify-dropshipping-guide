@@ -1,774 +1,776 @@
+Извините за прерывание. Вот завершенный и исправленный код:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>Shopify Partner | Start Your E-commerce Journey</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Base Styles */
-        :root {
-            --shopify-green: #008060;
-            --shopify-light-green: #96bf48;
-            --shopify-dark: #212326;
-            --shopify-light: #f4f6f8;
-            --text-dark: #212326;
-            --text-light: #6b7177;
-            --white: #ffffff;
-            --gray-100: #f9fafb;
-            --gray-200: #f4f6f8;
-            --gray-300: #e3e8ee;
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--shopify-green);
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--shopify-light-green);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5 {
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            margin-bottom: 24px;
-        }
-        
-        h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 20px;
-        }
-        
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            margin-bottom: 16px;
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background-color: var(--shopify-green);
-            color: var(--white);
-        }
-        
-        .btn-primary:hover {
-            background-color: #006e52;
-            color: var(--white);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--shopify-green);
-            border: 2px solid var(--shopify-green);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--shopify-green);
-            color: var(--white);
-        }
-        
-        .btn-lg {
-            padding: 16px 32px;
-            font-size: 18px;
-        }
-        
-        /* Header */
-        header {
-            padding: 20px 0;
-            background-color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--shopify-green);
-        }
-        
-        .logo svg {
-            height: 32px;
-            margin-right: 8px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 32px;
-        }
-        
-        nav a {
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-        
-        nav a:hover {
-            color: var(--shopify-green);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 100px 0;
-            background-color: var(--gray-100);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(var(--gray-300) 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.5;
-            z-index: 0;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .hero-text {
-            max-width: 600px;
-        }
-        
-        .hero-text h1 {
-            margin-bottom: 24px;
-        }
-        
-        .hero-text p {
-            font-size: 18px;
-            color: var(--text-light);
-            margin-bottom: 32px;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-        }
-        
-        .hero-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .hero-image img {
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            max-width: 100%;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 100px 0;
-            background-color: var(--white);
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 64px;
-        }
-        
-        .section-header p {
-            font-size: 18px;
-            color: var(--text-light);
-            margin-top: 16px;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-        
-        .feature-card {
-            background-color: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            background-color: rgba(0, 128, 96, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: var(--shopify-green);
-            font-size: 24px;
-        }
-        
-        .feature-card h3 {
-            margin-bottom: 16px;
-            font-size: 20px;
-        }
-        
-        .feature-card p {
-            color: var(--text-light);
-        }
-        
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            background-color: var(--gray-100);
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-        
-        .about-image img {
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .about-text h2 {
-            margin-bottom: 24px;
-        }
-        
-        .about-text p {
-            margin-bottom: 16px;
-            color: var(--text-light);
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 32px;
-        }
-        
-        .stat {
-            padding: 16px;
-            background-color: var(--white);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--shopify-green);
-            margin-bottom: 8px;
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-        
-        /* CTA Section */
-        .cta {
-            padding: 100px 0;
-            background-color: var(--shopify-dark);
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .cta-content {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .cta h2 {
-            margin-bottom: 24px;
-        }
-        
-        .cta p {
-            margin-bottom: 32px;
-            font-size: 18px;
-            color: var(--gray-300);
-        }
-        
-        .affiliate-button {
-            background-color: var(--shopify-green);
-            color: var(--white);
-            font-size: 18px;
-            padding: 16px 32px;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .affiliate-button:hover {
-            background-color: #006e52;
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--shopify-dark);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 64px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .footer-logo {
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--white);
-        }
-        
-        .footer-logo svg {
-            height: 32px;
-            margin-right: 8px;
-        }
-        
-        .footer-about p {
-            color: var(--gray-300);
-            margin-bottom: 24px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 16px;
-        }
-        
-        .social-links a {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--shopify-green);
-        }
-        
-        .footer-nav h4 {
-            font-size: 16px;
-            margin-bottom: 24px;
-            color: var(--white);
-        }
-        
-        .footer-nav ul {
-            list-style: none;
-        }
-        
-        .footer-nav ul li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-nav ul li a {
-            color: var(--gray-300);
-            transition: color 0.3s ease;
-        }
-        
-        .footer-nav ul li a:hover {
-            color: var(--white);
-        }
-        
-        .footer-bottom {
-            padding-top: 30px;
-            text-align: center;
-            color: var(--gray-300);
-            font-size: 14px;
-        }
-        
-        .footer-bottom p {
-            margin-bottom: 10px;
-        }
-        
-        /* Disclosure Banner */
-        .disclosure {
-            background-color: rgba(255,255,255,0.1);
-            padding: 10px 0;
-            font-size: 12px;
-            color: var(--gray-300);
-            text-align: center;
-        }
-        
-        /* Media Queries */
-        @media (max-width: 992px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-text {
-                max-width: 100%;
-            }
-            
-            .hero-buttons {
-                justify-content: center;
-            }
-            
-            .hero-image {
-                order: -1;
-                margin-bottom: 40px;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+ <title>Shopify Partner Start Your E-commerce Journey</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <style>
+ /* Base Styles */
+ :root {
+ --shopify-green: #008060;
+ --shopify-light-green: #96bf48;
+ --shopify-dark: #212326;
+ --shopify-light: #f4f6f8;
+ --text-dark: #212326;
+ --text-light: #6b7177;
+ --white: #ffffff;
+ --gray-100: #f9fafb;
+ --gray-200: #f4f6f8;
+ --gray-300: #e3e8ee;
+ --radius-sm: 4px;
+ --radius-md: 8px;
+ --radius-lg: 12px;
+ --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+ --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
+ --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+ }
+ 
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ 
+ body {
+ font-family: 'Inter', sans-serif;
+ line-height: 1.6;
+ color: var(--text-dark);
+ background-color: var(--white);
+ }
+ 
+ a {
+ text-decoration: none;
+ color: var(--shopify-green);
+ transition: color 0.3s ease;
+ }
+ 
+ a:hover {
+ color: var(--shopify-light-green);
+ }
+ 
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ 
+ img {
+ max-width: 100%;
+ height: auto;
+ }
+ 
+ /* Typography */
+ h1, h2, h3, h4, h5 {
+ font-weight: 700;
+ line-height: 1.2;
+ }
+ 
+ h1 {
+ font-size: clamp(2.5rem, 5vw, 3.5rem);
+ margin-bottom: 24px;
+ }
+ 
+ h2 {
+ font-size: clamp(2rem, 4vw, 2.5rem);
+ margin-bottom: 20px;
+ }
+ 
+ h3 {
+ font-size: clamp(1.5rem, 3vw, 2rem);
+ margin-bottom: 16px;
+ }
+ 
+ /* Buttons */
+ .btn {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ padding: 12px 24px;
+ border-radius: var(--radius-md);
+ font-weight: 600;
+ transition: all 0.3s ease;
+ border: none;
+ cursor: pointer;
+ }
+ 
+ .btn-primary {
+ background-color: var(--shopify-green);
+ color: var(--white);
+ }
+ 
+ .btn-primary:hover {
+ background-color: #006e52;
+ color: var(--white);
+ }
+ 
+ .btn-outline {
+ background-color: transparent;
+ color: var(--shopify-green);
+ border: 2px solid var(--shopify-green);
+ }
+ 
+ .btn-outline:hover {
+ background-color: var(--shopify-green);
+ color: var(--white);
+ }
+ 
+ .btn-lg {
+ padding: 16px 32px;
+ font-size: 18px;
+ }
+ 
+ /* Header */
+ header {
+ padding: 20px 0;
+ background-color: var(--white);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ box-shadow: var(--shadow-sm);
+ }
+ 
+ .header-content {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ 
+ .logo {
+ display: flex;
+ align-items: center;
+ font-size: 24px;
+ font-weight: 700;
+ color: var(--shopify-green);
+ }
+ 
+ .logo svg {
+ height: 32px;
+ margin-right: 8px;
+ }
+ 
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 32px;
+ }
+ 
+ nav a {
+ color: var(--text-dark);
+ font-weight: 500;
+ }
+ 
+ nav a:hover {
+ color: var(--shopify-green);
+ }
+ 
+ .mobile-menu-btn {
+ display: none;
+ background: none;
+ border: none;
+ cursor: pointer;
+ font-size: 24px;
+ }
+ 
+ /* Hero Section */
+ .hero {
+ padding: 100px 0;
+ background-color: var(--gray-100);
+ position: relative;
+ overflow: hidden;
+ }
+ 
+ .hero::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ right: 0;
+ width: 100%;
+ height: 100%;
+ background-image: radial-gradient(var(--gray-300) 1px, transparent 1px);
+ background-size: 20px 20px;
+ opacity: 0.5;
+ z-index: 0;
+ }
+ 
+ .hero-content {
+ position: relative;
+ z-index: 1;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 40px;
+ align-items: center;
+ }
+ 
+ .hero-text {
+ max-width: 600px;
+ }
+ 
+ .hero-text h1 {
+ margin-bottom: 24px;
+ }
+ 
+ .hero-text p {
+ font-size: 18px;
+ color: var(--text-light);
+ margin-bottom: 32px;
+ }
+ 
+ .hero-buttons {
+ display: flex;
+ gap: 16px;
+ }
+ 
+ .hero-image {
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
+ 
+ .hero-image img {
+ border-radius: var(--radius-lg);
+ box-shadow: var(--shadow-lg);
+ max-width: 100%;
+ }
+ 
+ /* Features Section */
+ .features {
+ padding: 100px 0;
+ background-color: var(--white);
+ }
+ 
+ .section-header {
+ text-align: center;
+ max-width: 800px;
+ margin: 0 auto 64px;
+ }
+ 
+ .section-header p {
+ font-size: 18px;
+ color: var(--text-light);
+ margin-top: 16px;
+ }
+ 
+ .features-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 32px;
+ margin-top: 48px;
+ }
+ 
+ .feature-card {
+ background-color: var(--white);
+ border-radius: var(--radius-lg);
+ padding: 32px;
+ box-shadow: var(--shadow-md);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .feature-card:hover {
+ transform: translateY(-5px);
+ box-shadow: var(--shadow-lg);
+ }
+ 
+ .feature-icon {
+ width: 56px;
+ height: 56px;
+ background-color: rgba(0, 128, 96, 0.1);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 24px;
+ color: var(--shopify-green);
+ font-size: 24px;
+ }
+ 
+ .feature-card h3 {
+ margin-bottom: 16px;
+ font-size: 20px;
+ }
+ 
+ .feature-card p {
+ color: var(--text-light);
+ }
+ 
+ /* About Section */
+ .about {
+ padding: 100px 0;
+ background-color: var(--gray-100);
+ }
+ 
+ .about-content {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 64px;
+ align-items: center;
+ }
+ 
+ .about-image img {
+ border-radius: var(--radius-lg);
+ box-shadow: var(--shadow-md);
+ }
+ 
+ .about-text h2 {
+ margin-bottom: 24px;
+ }
+ 
+ .about-text p {
+ margin-bottom: 16px;
+ color: var(--text-light);
+ }
+ 
+ .stats {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 16px;
+ margin-top: 32px;
+ }
+ 
+ .stat {
+ padding: 16px;
+ background-color: var(--white);
+ border-radius: var(--radius-md);
+ box-shadow: var(--shadow-sm);
+ text-align: center;
+ }
+ 
+ .stat-number {
+ font-size: 32px;
+ font-weight: 700;
+ color: var(--shopify-green);
+ margin-bottom: 8px;
+ }
+ 
+ .stat-label {
+ font-size: 14px;
+ color: var(--text-light);
+ font-weight: 500;
+ }
+ 
+ /* CTA Section */
+ .cta {
+ padding: 100px 0;
+ background-color: var(--shopify-dark);
+ color: var(--white);
+ text-align: center;
+ }
+ 
+ .cta-content {
+ max-width: 700px;
+ margin: 0 auto;
+ }
+ 
+ .cta h2 {
+ margin-bottom: 24px;
+ }
+ 
+ .cta p {
+ margin-bottom: 32px;
+ font-size: 18px;
+ color: var(--gray-300);
+ }
+ 
+ .affiliate-button {
+ background-color: var(--shopify-green);
+ color: var(--white);
+ font-size: 18px;
+ padding: 16px 32px;
+ border-radius: var(--radius-md);
+ font-weight: 600;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ transition: all 0.3s ease;
+ }
+ 
+ .affiliate-button:hover {
+ background-color: #006e52;
+ color: var(--white);
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-md);
+ }
+ 
+ /* Footer */
+ footer {
+ background-color: var(--shopify-dark);
+ color: var(--white);
+ padding: 60px 0 30px;
+ }
+ 
+ .footer-content {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr 1fr;
+ gap: 64px;
+ padding-bottom: 40px;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ 
+ .footer-logo {
+ margin-bottom: 24px;
+ display: flex;
+ align-items: center;
+ font-size: 24px;
+ font-weight: 700;
+ color: var(--white);
+ }
+ 
+ .footer-logo svg {
+ height: 32px;
+ margin-right: 8px;
+ }
+ 
+ .footer-about p {
+ color: var(--gray-300);
+ margin-bottom: 24px;
+ }
+ 
+ .social-links {
+ display: flex;
+ gap: 16px;
+ }
+ 
+ .social-links a {
+ width: 36px;
+ height: 36px;
+ border-radius: 50%;
+ background-color: rgba(255, 255, 255, 0.1);
+ color: var(--white);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: background-color 0.3s ease;
+ }
+ 
+ .social-links a:hover {
+ background-color: var(--shopify-green);
+ }
+ 
+ .footer-nav h4 {
+ font-size: 16px;
+ margin-bottom: 24px;
+ color: var(--white);
+ }
+ 
+ .footer-nav ul {
+ list-style: none;
+ }
+ 
+ .footer-nav ul li {
+ margin-bottom: 12px;
+ }
+ 
+ .footer-nav ul li a {
+ color: var(--gray-300);
+ transition: color 0.3s ease;
+ }
+ 
+ .footer-nav ul li a:hover {
+ color: var(--white);
+ }
+ 
+ .footer-bottom {
+ padding-top: 30px;
+ text-align: center;
+ color: var(--gray-300);
+ font-size: 14px;
+ }
+ 
+ .footer-bottom p {
+ margin-bottom: 10px;
+ }
+ 
+ /* Disclosure Banner */
+ .disclosure {
+ background-color: rgba(255,255,255,0.1);
+ padding: 10px 0;
+ font-size: 12px;
+ color: var(--gray-300);
+ text-align: center;
+ }
+ 
+ /* Media Queries */
+ @media (max-width: 992px) {
+ .hero-content {
+ grid-template-columns: 1fr;
+ text-align: center;
+ }
+ 
+ .hero-text {
+ max-width: 100%;
+ }
+ 
+ .hero-buttons {
+ justify-content: center;
+ }
+ 
+ .hero-image {
+ order: -1;
+ margin-bottom: 40px;
+ }
+ 
+ .about-content {
+ grid-template-columns: 1fr;
+ gap: 40px;
+ }
+ 
+ .footer-content {
+ grid-template-columns: 1fr;
+ gap: 40px;
+ }
+ }
+ 
+ @media (max-width: 768px) {
+ nav {
+ display: none;
+ }
+ 
+ .mobile-menu-btn {
+ display: block;
+ }
+ 
+ .features-grid {
+ grid-template-columns: 1fr;
+ }
+ 
+ .stats {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <!-- Shopify Logo SVG (simplified) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.5 31" fill="#008060">
-                        <path d="M74.7,15.5c-0.8-0.4-1.2-0.8-1.2-1.3c0-0.6,0.6-1,1.5-1c1.1,0,2,0.4,2,0.4l0.7-2.2c0,0-0.7-0.5-2.7-0.5
-                        c-2.8,0-4.7,1.6-4.7,3.8c0,1.3,0.9,2.2,2.1,2.9c1,0.5,1.3,0.9,1.3,1.4c0,0.6-0.5,1-1.4,1c-1.3,0-2.6-0.7-2.6-0.7l-0.8,2.2
-                        c0,0,1.2,0.8,3.2,0.8c2.9,0,5-1.4,5-4C77.1,17,75.8,16.1,74.7,15.5z"></path>
-                        <path d="M87.4,11c-1.4,0-2.6,0.7-3.4,1.7l0,0l1.2-6.3h-3.1l-3.1,16.4h3.1l1-5.6c0.4-2.1,1.5-3.3,2.5-3.3
-                        c0.7,0,1,0.5,1,1.2c0,0.4-0.1,0.9-0.1,1.3l-1.2,6.4h3.1l1.2-6.5c0.1-0.6,0.2-1.4,0.2-1.8C89.7,12.1,88.8,11,87.4,11z"></path>
-                        <path d="M98.1,11c-3.7,0-6.1,3.3-6.1,7.1c0,2.4,1.5,4.3,4.2,4.3c3.6,0,6.1-3.3,6.1-7.1C102.3,12.9,100.8,11,98.1,11z
-                         M96.8,19.6c-1,0-1.5-0.9-1.5-2c0-1.8,0.9-4.6,2.6-4.6c1.1,0,1.4,0.9,1.4,1.8C99.4,16.8,98.5,19.6,96.8,19.6z"></path>
-                        <path d="M109.5,11c-2.1,0-3.3,1.8-3.3,1.8l0.2-1.6h-2.7c-0.1,1.3-0.4,3.3-0.7,4.8l-2.4,12.8h3.1l0.9-5.2h0.1
-                        c0,0,0.6,0.5,1.8,0.5c3.5,0,5.9-3.6,5.9-7.3C112.4,13.1,111.7,11,109.5,11z M106.9,19.8c-0.8,0-1.3-0.4-1.3-0.4l0.5-2.9
-                        c0.4-2,1.4-3.3,2.4-3.3c0.9,0,1.2,0.9,1.2,1.7C109.8,16.8,108.5,19.8,106.9,19.8z"></path>
-                        <path d="M37.5,10.9l-2.1,11.2c0,0-2.3-12.1-2.4-12.6c-1.2,0-2.4-0.1-3.6-0.2c0,0.2-2.2,12.4-2.2,12.4L25.2,11
-                        c0,0-2,0.3-3,0.4c0.2,1.8,1.1,11.3,1.3,13c1.3,0.1,2.5,0.2,3.8,0.2c0,0,0-0.2,1.4-7.1l1.9,7.2c1.3,0,2.6,0,3.9-0.1
-                        c0,0,0-0.1,2.5-13c-1.5-0.1-2.9-0.3-4.3-0.5C32.7,11.1,35.1,11,37.5,10.9L37.5,10.9z"></path>
-                        <path d="M52,10.4c-1.2,0-2.2,0-3.2,0.1c0,0.1-0.7,3.4-0.7,3.4s-1.7-0.2-2.4-0.2c-2.1,0-2.9,1-3,2.2
-                        c-0.2,1.5,2.1,2,2.9,3.2c0.8,1.3,0.2,2.5-1.1,2.7c-1,0.1-2.5-0.2-3.5-0.6c0,0.2-0.7,2.7-0.7,2.7c1.1,0.4,2.1,0.7,4,0.7
-                        c2,0,4.3-0.7,4.4-3.5c0.1-2.2-2.5-2.8-2.9-3.1c-0.7-0.6-0.6-1-0.3-1.2c0.3-0.1,1.5-0.2,2.4,0.1C47,15,52,10.4,52,10.4z"></path>
-                        <path d="M60.3,24.2c1.2-0.1,2.1-0.2,3.1-0.3c-0.1-0.2-0.7-9.1-0.7-9.1c-1.2,0.1-2.3,0.2-3.5,0.2c0,0-0.2,0.9-0.2,0.9
-                        c-0.6-0.8-1.7-1.2-2.6-1.1c-2.9,0.2-4.8,3-5,6.2c-0.2,2.7,1.2,4.9,3.5,4.7c0.9-0.1,2.2-0.6,2.8-1.3L60.3,24.2L60.3,24.2z M58,20.6
-                        c-0.4,0.6-0.8,0.7-1.3,0.8c-1.1,0.1-1.7-0.8-1.6-2.3c0.1-1.5,0.7-3.2,2.1-3.3c0.6,0,1,0.3,1.1,0.8L58,20.6L58,20.6z"></path>
-                        <path d="M67.2,14.8c-1,0.1-2,0.2-3.1,0.3l0.7,8.9l3.1-0.3L67.2,14.8z"></path>
-                        <path d="M67.3,13.6c1-0.1,2-0.2,3.1-0.3l0.2-2.7l-3.1,0.3L67.3,13.6z"></path>
-                        <path d="M22.6,3.9c0,0-0.3,0.1-0.8,0.3c-0.1-0.3-0.2-0.5-0.4-0.8c-0.5-0.9-1.3-1.4-2.2-1.4C15.1,2,15,5.5,15,5.6
-                        c-1.5,0.5-3.3,1-4.9,1.5c-1.5,0.5-1.5,0.5-1.7,2C8.2,9.7,6,22.3,6,22.3l15.1,2.8l8.2-2L22.6,3.9z M20,5.2c0,0-0.1,0-0.2,0.1
-                        c-0.2-0.5-0.5-1.1-0.9-1.5C19.2,4,19.5,4.6,20,5.2z M18.2,3.3c0.3,0.4,0.6,1,0.8,1.6c-0.6,0.2-1.3,0.4-2,0.6
-                        C17.3,4.4,17.7,3.7,18.2,3.3z M19.3,2.2c0.3,0,0.5,0.1,0.7,0.2c-0.4,0.2-0.8,0.6-1.2,1.2C18.5,2.9,18.9,2.3,19.3,2.2z"></path>
-                        <path d="M21.2,8l-0.6,3.3c0,0-1.5-0.3-2.2-0.1c-1.8,0.3-1.8,1.3-1.8,1.6c0.1,0.8,2.1,1,3,1.1c0.9,0.1,1.3,0.2,1.3,0.9
-                        c-0.1,1.1-3,1.1-4.5,0.1l-0.6,3.5c0,0,1.6,0.7,4.2,0.4c3.8-0.4,5-2.6,5.2-3.7c0.3-1.5,0-2.3-1-3c-0.7-0.5-2-0.8-2-0.8
-                        s0.8-0.5,1-1.1c0.1-0.6-0.3-1.3-1.2-1.6C21.7,8,21.2,8,21.2,8z"></path>
-                    </svg>
-                    <span>Partner</span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#cta">Start Now</a></li>
-                    </ul>
-                </nav>
-                <button class="mobile-menu-btn">☰</button>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Build Your Dream Online Store with Shopify</h1>
-                    <p>Start, grow, and scale your business with the leading e-commerce platform trusted by millions of entrepreneurs worldwide.</p>
-                    <div class="hero-buttons">
-                        <a href="#cta" class="btn btn-primary btn-lg">Start Free Trial</a>
-                        <a href="#features" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="shopify-dashboard.jpg" alt="Shopify Dashboard">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Everything You Need to Sell Online</h2>
-                <p>Shopify offers a complete commerce platform that lets you start, grow, and manage your business.</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🛍️</div>
-                    <h3>Beautiful Online Store</h3>
-                    <p>Create a customized online store with our powerful and flexible shopping cart. Mobile-optimized designs, secure checkout, and multiple languages supported.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Omnichannel Selling</h3>
-                    <p>Sell across multiple sales channels, including social media, marketplaces, and in person with Shopify POS.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Analytics & Reporting</h3>
-                    <p>Get detailed analytics about your store performance, customer behavior, and marketing campaign results.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Marketing Tools</h3>
-                    <p>Grow your business with built-in SEO features, social media integration, and targeted email marketing campaigns.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Reliable Security</h3>
-                    <p>Shopify is PCI compliant and includes SSL certificates, fraud analysis, and secure payment gateways.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Global Commerce</h3>
-                    <p>Sell in multiple currencies, configure international pricing, and manage global shipping and taxes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Why Choose Shopify?</h2>
-                    <p>Shopify is the all-in-one commerce platform to start, run, and grow a business. With Shopify, you get more than just an ecommerce website—you get everything you need to sell online, on social media, or in person.</p>
-                    <p>Since 2006, Shopify has helped over 1.7 million businesses in more than 175 countries generate over $200 billion in sales. From small boutiques to global brands, Shopify powers businesses of all sizes.</p>
-                    
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="stat-number">1.7M+</div>
-                            <div class="stat-label">Active Merchants</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">175+</div>
-                            <div class="stat-label">Countries</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">$200B+</div>
-                            <div class="stat-label">In Sales</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="shopify-store.jpg" alt="Shopify Store">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section id="cta" class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Online Business?</h2>
-                <p>Try Shopify free for 14 days. No credit card required.</p>
-                <!-- Replace with your affiliate link -->
-                <a href="https://shopify.pxf.io/YR7XLm" class="affiliate-button" target="_blank">Start Your Free Trial</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Disclosure Banner -->
-    <div class="disclosure">
-        <div class="container">
-            <p>This page contains affiliate links. As a Shopify Partner, we earn commissions from qualifying purchases.</p>
-        </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.5 31" fill="#ffffff" width="100">
-                            <path d="M74.7,15.5c-0.8-0.4-1.2-0.8-1.2-1.3c0-0.6,0.6-1,1.5-1c1.1,0,2,0.4,2,0.4l0.7-2.2c0,0-0.7-0.5-2.7-0.5
-                            c-2.8,0-4.7,1.6-4.7,3.8c0,1.3,0.9,2.2,2.1,2.9c1,0.5,1.3,0.9,1.3,1.4c0,0.6-0.5,1-1.4,1c-1.3,0-2.6-0.7-2.6-0.7l-0.8,2.2
-                            c0,0,1.2,0.8,3.2,0.8c2.9,0,5-1.4,5-4C77.1,17,75.8,16.1,74.7,15.5z"></path>
-                        </svg>
-                        <span>Partner</span>
-                    </div>
-                    <p>We help businesses of all sizes launch, grow, and scale with Shopify. Our team of experts provides guidance and support for your e-commerce journey.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">f</a>
-                        <a href="#" aria-label="Twitter">t</a>
-                        <a href="#" aria-label="Instagram">i</a>
-                        <a href="#" aria-label="LinkedIn">in</a>
-                    </div>
-                </div>
-                
-                <div class="footer-nav">
-                    <h4>Platform</h4>
-                    <ul>
-                        <li><a href="#">Online Store</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Examples</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-nav">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Success Stories</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-nav">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Shopify Partner Site. All rights reserved.</p>
-                <p>"Shopify" and associated logos are trademarks of Shopify Inc.</p>
-            </div>
-        </div>
-    </footer>
+ <!-- Header -->
+ <header>
+ <div class="container">
+ <div class="header-content">
+ <div class="logo">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.5 31" fill="#008060">
+ <path d="M74.7,15.5c-0.8-0.4-1.2-0.8-1.2-1.3c0-0.6,0.6-1,1.5-1c1.1,0,2,0.4,2,0.4l0.7-2.2c0,0-0.7-0.5-2.7-0.5
+ c-2.8,0-4.7,1.6-4.7,3.8c0,1.3,0.9,2.2,2.1,2.9c1,0.5,1.3,0.9,1.3,1.4c0,0.6-0.5,1-1.4,1c-1.3,0-2.6-0.7-2.6-0.7l-0.8,2.2
+ c0,0,1.2,0.8,3.2,0.8c2.9,0,5-1.4,5-4C77.1,17,75.8,16.1,74.7,15.5z"></path>
+ <path d="M87.4,11c-1.4,0-2.6,0.7-3.4,1.7l0,0l1.2-6.3h-3.1l-3.1,16.4h3.1l1-5.6c0.4-2.1,1.5-3.3,2.5-3.3
+ c0.7,0,1,0.5,1,1.2c0,0.4-0.1,0.9-0.1,1.3l-1.2,6.4h3.1l1.2-6.5c0.1-0.6,0.2-1.4,0.2-1.8C89.7,12.1,88.8,11,87.4,11z"></path>
+ <path d="M98.1,11c-3.7,0-6.1,3.3-6.1,7.1c0,2.4,1.5,4.3,4.2,4.3c3.6,0,6.1-3.3,6.1-7.1C102.3,12.9,100.8,11,98.1,11z
+ M96.8,19.6c-1,0-1.5-0.9-1.5-2c0-1.8,0.9-4.6,2.6-4.6c1.1,0,1.4,0.9,1.4,1.8C99.4,16.8,98.5,19.6,96.8,19.6z"></path>
+ <path d="M109.5,11c-2.1,0-3.3,1.8-3.3,1.8l0.2-1.6h-2.7c-0.1,1.3-0.4,3.3-0.7,4.8l-2.4,12.8h3.1l0.9-5.2h0.1
+ c0,0,0.6,0.5,1.8,0.5c3.5,0,5.9-3.6,5.9-7.3C112.4,13.1,111.7,11,109.5,11z M106.9,19.8c-0.8,0-1.3-0.4-1.3-0.4l0.5-2.9
+ c0.4-2,1.4-3.3,2.4-3.3c0.9,0,1.2,0.9,1.2,1.7C109.8,16.8,108.5,19.8,106.9,19.8z"></path>
+ <path d="M37.5,10.9l-2.1,11.2c0,0-2.3-12.1-2.4-12.6c-1.2,0-2.4-0.1-3.6-0.2c0,0.2-2.2,12.4-2.2,12.4L25.2,11
+ c0,0-2,0.3-3,0.4c0.2,1.8,1.1,11.3,1.3,13c1.3,0.1,2.5,0.2,3.8,0.2c0,0,0-0.2,1.4-7.1l1.9,7.2c1.3,0,2.6,0,3.9-0.1
+ c0,0,0-0.1,2.5-13c-1.5-0.1-2.9-0.3-4.3-0.5C32.7,11.1,35.1,11,37.Извините за прерывание. Вот завершённый HTML код с внесёнными изменениями:
+
+```html
+5,10.9z"></path>
+ <path d="M52,10.4c-1.2,0-2.2,0-3.2,0.1c0,0.1-0.7,3.4-0.7,3.4s-1.7-0.2-2.4-0.2c-2.1,0-2.9,1-3,2.2
+ c-0.2,1.5,2.1,2,2.9,3.2c0.8,1.3,0.2,2.5-1.1,2.7c-1,0.1-2.5-0.2-3.5-0.6c0,0.2-0.7,2.7-0.7,2.7c1.1,0.4,2.1,0.7,4,0.7
+ c2,0,4.3-0.7,4.4-3.5c0.1-2.2-2.5-2.8-2.9-3.1c-0.7-0.6-0.6-1-0.3-1.2c0.3-0.1,1.5-0.2,2.4,0.1C47,15,52,10.4,52,10.4z"></path>
+ <path d="M60.3,24.2c1.2-0.1,2.1-0.2,3.1-0.3c-0.1-0.2-0.7-9.1-0.7-9.1c-1.2,0.1-2.3,0.2-3.5,0.2c0,0-0.2,0.9-0.2,0.9
+ c-0.6-0.8-1.7-1.2-2.6-1.1c-2.9,0.2-4.8,3-5,6.2c-0.2,2.7,1.2,4.9,3.5,4.7c0.9-0.1,2.2-0.6,2.8-1.3L60.3,24.2L60.3,24.2z M58,20.6
+ c-0.4,0.6-0.8,0.7-1.3,0.8c-1.1,0.1-1.7-0.8-1.6-2.3c0.1-1.5,0.7-3.2,2.1-3.3c0.6,0,1,0.3,1.1,0.8L58,20.6L58,20.6z"></path>
+ <path d="M67.2,14.8c-1,0.1-2,0.2-3.1,0.3l0.7,8.9l3.1-0.3L67.2,14.8z"></path>
+ <path d="M67.3,13.6c1-0.1,2-0.2,3.1-0.3l0.2-2.7l-3.1,0.3L67.3,13.6z"></path>
+ <path d="M22.6,3.9c0,0-0.3,0.1-0.8,0.3c-0.1-0.3-0.2-0.5-0.4-0.8c-0.5-0.9-1.3-1.4-2.2-1.4C15.1,2,15,5.5,15,5.6
+ c-1.5,0.5-3.3,1-4.9,1.5c-1.5,0.5-1.5,0.5-1.7,2C8.2,9.7,6,22.3,6,22.3l15.1,2.8l8.2-2L22.6,3.9z M20,5.2c0,0-0.1,0-0.2,0.1
+ c-0.2-0.5-0.5-1.1-0.9-1.5C19.2,4,19.5,4.6,20,5.2z M18.2,3.3c0.3,0.4,0.6,1,0.8,1.6c-0.6,0.2-1.3,0.4-2,0.6
+ C17.3,4.4,17.7,3.7,18.2,3.3z M19.3,2.2c0.3,0,0.5,0.1,0.7,0.2c-0.4,0.2-0.8,0.6-1.2,1.2C18.5,2.9,18.9,2.3,19.3,2.2z"></path>
+ <path d="M21.2,8l-0.6,3.3c0,0-1.5-0.3-2.2-0.1c-1.8,0.3-1.8,1.3-1.8,1.6c0.1,0.8,2.1,1,3,1.1c0.9,0.1,1.3,0.2,1.3,0.9
+ c-0.1,1.1-3,1.1-4.5,0.1l-0.6,3.5c0,0,1.6,0.7,4.2,0.4c3.8-0.4,5-2.6,5.2-3.7c0.3-1.5,0-2.3-1-3c-0.7-0.5-2-0.8-2-0.8
+ s0.8-0.5,1-1.1c0.1-0.6-0.3-1.3-1.2-1.6C21.7,8,21.2,8,21.2,8z"></path>
+ </svg>
+ <span>Partner</span>
+ </div>
+ <nav>
+ <ul>
+ <li><a href="#home">Home</a></li>
+ <li><a href="#features">Features</a></li>
+ <li><a href="#about">About</a></li>
+ <li><a href="#cta">Start Now</a></li>
+ </ul>
+ </nav>
+ <button class="mobile-menu-btn"></button>
+ </div>
+ </div>
+ </header>
+ 
+ <!-- Hero Section -->
+ <section id="home" class="hero">
+ <div class="container">
+ <div class="hero-content">
+ <div class="hero-text">
+ <h1>Build Your Dream Online Store with Shopify</h1>
+ <p>Start, grow, and scale your business with the leading e-commerce platform trusted by millions of entrepreneurs worldwide.</p>
+ <div class="hero-buttons">
+ <a href="https://shopify.pxf.io/YR7XLm" class="btn btn-primary btn-lg" target="_blank">Start Free Trial</a>
+ <a href="#features" class="btn btn-outline">Learn More</a>
+ </div>
+ </div>
+ <div class="hero-image">
+ <img src="shopify-dashboard.jpg" alt="Shopify Dashboard">
+ </div>
+ </div>
+ </div>
+ </section>
+ 
+ <!-- Features Section -->
+ <section id="features" class="features">
+ <div class="container">
+ <div class="section-header">
+ <h2>Everything You Need to Sell Online</h2>
+ <p>Shopify offers a complete commerce platform that lets you start, grow, and manage your business.</p>
+ </div>
+ 
+ <div class="features-grid">
+ <div class="feature-card">
+ <div class="feature-icon"></div>
+ <h3>Beautiful Online Store</h3>
+ <p>Create a customized online store with our powerful and flexible shopping cart. Mobile-optimized designs, secure checkout, and multiple languages supported.</p>
+ </div>
+ 
+ <div class="feature-card">
+ <div class="feature-icon"></div>
+ <h3>Omnichannel Selling</h3>
+ <p>Sell across multiple sales channels, including social media, marketplaces, and in person with Shopify POS.</p>
+ </div>
+ 
+ <div class="feature-card">
+ <div class="feature-icon"></div>
+ <h3>Analytics & Reporting</h3>
+ <p>Get detailed analytics about your store performance, customer behavior, and marketing campaign results.</p>
+ </div>
+ 
+ <div class="feature-card">
+ <div class="feature-icon"></div>
+ <h3>Marketing Tools</h3>
+ <p>Grow your business with built-in SEO features, social media integration, and targeted email marketing campaigns.</p>
+ </div>
+ 
+ <div class="feature-card">
+ <div class="feature-icon"></div>
+ <h3>Reliable Security</h3>
+ <p>Shopify is PCI compliant and includes SSL certificates, fraud analysis, and secure payment gateways.</p>
+ </div>
+ 
+ <div class="feature-card">
+ <div class="feature-icon"></div>
+ <h3>Global Commerce</h3>
+ <p>Sell in multiple currencies, configure international pricing, and manage global shipping and taxes.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ 
+ <!-- About Section -->
+ <section id="about" class="about">
+ <div class="container">
+ <div class="about-content">
+ <div class="about-text">
+ <h2>Why Choose Shopify?</h2>
+ <p>Shopify is the all-in-one commerce platform to start, run, and grow a business. With Shopify, you get more than just an ecommerce website—you get everything you need to sell online, on social media, or in person.</p>
+ <p>Since 2006, Shopify has helped over 1.7 million businesses in more than 175 countries generate over 200 billion in sales. From small boutiques to global brands, Shopify powers businesses of all sizes.</p>
+ 
+ <div class="stats">
+ <div class="stat">
+ <div class="stat-number">1.7M+</div>
+ <div class="stat-label">Active Merchants</div>
+ </div>
+ <div class="stat">
+ <div class="stat-number">175+</div>
+ <div class="stat-label">Countries</div>
+ </div>
+ <div class="stat">
+ <div class="stat-number">200B+</div>
+ <div class="stat-label">In Sales</div>
+ </div>
+ </div>
+ </div>
+ <div class="about-image">
+ <img src="shopify-store.jpg" alt="Shopify Store">
+ </div>
+ </div>
+ </div>
+ </section>
+ 
+ <!-- CTA Section -->
+ <section id="cta" class="cta">
+ <div class="container">
+ <div class="cta-content">
+ <h2>Ready to Start Your Online Business?</h2>
+ <p>Try Shopify free for 14 days. No credit card required.</p>
+ <a href="https://shopify.pxf.io/YR7XLm" class="affiliate-button" target="_blank">Start Your Free Trial</a>
+ </div>
+ </div>
+ </section>
+ 
+ <!-- Disclosure Banner -->
+ <div class="disclosure">
+ <div class="container">
+ <p>This page contains affiliate links. As a Shopify Partner, we earn commissions from qualifying purchases.</p>
+ </div>
+ </div>
+ 
+ <!-- Footer -->
+ <footer>
+ <div class="container">
+ <div class="footer-content">
+ <div class="footer-about">
+ <div class="footer-logo">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.5 31" fill="#ffffff" width="100">
+ <path d="M74.7,15.5c-0.8-0.4-1.2-0.8-1.2-1.3c0-0.6,0.6-1,1.5-1c1.1,0,2,0.4,2,0.4l0.7-2.2c0,0-0.7-0.5-2.7-0.5
+ c-2.8,0-4.7,1.6-4.7,3.8c0,1.3,0.9,2.2,2.1,2.9c1,0.5,1.3,0.9,1.3,1.4c0,0.6-0.5,1-1.4,1c-1.3,0-2.6-0.7-2.6-0.7l-0.8,2.2
+ c0,0,1.2,0.8,3.2,0.8c2.9,0,5-1.4,5-4C77.1,17,75.8,16.1,74.7,15.5z"></path>
+ </svg>
+ <span>Partner</span>
+ </div>
+ <p>We help businesses of all sizes launch, grow, and scale with Shopify. Our team of experts provides guidance and support for your e-commerce journey.</p>
+ <div class="social-links">
+ <a href="#" aria-label="Facebook">f</a>
+ <a href="#" aria-label="Twitter">t</a>
+ <a href="#" aria-label="Instagram">i</a>
+ <a href="#" aria-label="LinkedIn">in</a>
+ </div>
+ </div>
+ 
+ <div class="footer-nav">
+ <h4>Platform</h4>
+ <ul>
+ <li><a href="#">Online Store</a></li>
+ <li><a href="#">Features</a></li>
+ <li><a href="#">Pricing</a></li>
+ <li><a href="#">Examples</a></li>
+ </ul>
+ </div>
+ 
+ <div class="footer-nav">
+ <h4>Resources</h4>
+ <ul>
+ <li><a href="#">Blog</a></li>
+ <li><a href="#">Help Center</a></li>
+ <li><a href="#">Tutorials</a></li>
+ <li><a href="#">Success Stories</a></li>
+ </ul>
+ </div>
+ 
+ <div class="footer-nav">
+ <h4>Company</h4>
+ <ul>
+ <li><a href="#">About Us</a></li>
+ <li><a href="#">Careers</a></li>
+ <li><a href="#">Privacy Policy</a></li>
+ <li><a href="#">Terms of Service</a></li>
+ </ul>
+ </div>
+ </div>
+ 
+ <div class="footer-bottom">
+ <p>&copy; 2025 Shopify Partner Site. All rights reserved.</p>
+ <p>"Shopify" and associated logos are trademarks of Shopify Inc.</p>
+ </div>
+ </div>
+ </footer>
 </body>
 </html>
-
