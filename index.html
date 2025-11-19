@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Launch your profitable Shopify dropshipping business in 8 simple steps. Find winning products, set up your store, and scale with proven strategies.">
-    <meta name="keywords" content="shopify dropshipping, dropshipping guide 2024, how to start dropshipping, shopify blueprint, step-by-step plan">
-    <title>Shopify Dropshipping Guide 2024: The A-Z Roadmap to Success</title>
-
+    <title>Shopify Dropshipping Blueprint - The Ultimate Guide to Success</title>
+    <meta name="description" content="Discover the ultimate Shopify Dropshipping Blueprint with our comprehensive guide. Start your profitable online business today with proven strategies and tools.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <style>
-        /* Base Styles */
         :root {
-            --shopify-green: #008060; 
-            --shopify-dark: #212326;
-            --text-dark: #212326;
-            --text-light: #6b7177;
-            --white: #ffffff;
-            --gray-100: #f9fafb;
-            --gray-300: #d3d9e0;
-            --radius-md: 8px; /* Softer radius for modern look */
-            --shadow-subtle: 0 4px 10px rgba(0,0,0,0.06); 
+            --shopify-green: #008060;
+            --shopify-light-green: #d1e8e2;
+            --text-dark: #212b36;
+            --text-light: #637381;
+            --background: #ffffff;
+            --border: #e1e3e5;
+            --shadow: 0 2px 5px rgba(33, 43, 54, 0.1);
         }
         
         * {
@@ -33,64 +27,38 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
             color: var(--text-dark);
-            background-color: var(--white);
+            background-color: var(--background);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--shopify-green);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            opacity: 0.85;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
         
-        /* Typography */
-        h1, h2, h3 {
-            font-weight: 700; 
-            line-height: 1.2;
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 28px; 
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            transition: all 0.2s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .btn-primary {
-            background-color: var(--shopify-green); 
-            color: var(--white);
-        }
-        
-        .btn-primary:hover {
-            background-color: #006e52; 
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--shopify-green);
-            border: 2px solid var(--shopify-green);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--shopify-green);
-            color: var(--white);
-        }
-        
-        /* Header */
+        /* Header Styles */
         header {
             padding: 20px 0;
-            box-shadow: var(--shadow-subtle);
+            border-bottom: 1px solid var(--border);
+            background-color: var(--background);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
-        .header-content {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -99,379 +67,711 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: var(--shopify-dark);
-        }
-
-        .logo span {
             color: var(--shopify-green);
         }
-
-        /* Navigation */
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
+        
+        .logo span {
+            color: var(--text-dark);
         }
         
-        nav a {
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-menu a {
             color: var(--text-dark);
             font-weight: 500;
-            text-decoration: none;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--shopify-green);
+        }
+        
+        .login-button {
+            padding: 8px 16px;
+            background-color: transparent;
+            border: 1px solid var(--shopify-green);
+            color: var(--shopify-green);
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .login-button:hover {
+            background-color: var(--shopify-light-green);
+        }
+        
+        .cta-button {
+            padding: 10px 20px;
+            background-color: var(--shopify-green);
+            color: white;
+            border-radius: 4px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #006e52;
         }
         
         /* Hero Section */
-        .section {
+        .hero {
             padding: 80px 0;
-        }
-
-        #hero {
-            background-color: var(--white); 
-            padding: 100px 0; 
-        }
-
-        .hero-layout {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-align: left;
-            gap: 60px; 
+            text-align: center;
         }
         
         .hero-content {
-            max-width: 50%;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .hero-image img {
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-subtle); 
-            border: 1px solid var(--gray-300);
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
         }
-
+        
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+        
         .hero-cta {
             display: flex;
-            gap: 15px;
-            margin-top: 30px;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-cta .cta-button {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+        
+        .hero-image {
+            margin-top: 60px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: #f9fafb;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(33, 43, 54, 0.1);
+        }
+        
+        .feature-icon {
+            background-color: var(--shopify-light-green);
+            color: var(--shopify-green);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: var(--text-light);
         }
         
         /* Pricing Section */
-
-        #pricing {
-            background-color: var(--gray-100);
-            text-align: center;
-        }
-
-        .pricing-cards-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .pricing-card {
-            background-color: var(--white);
-            border: 1px solid var(--gray-300);
-            border-radius: var(--radius-md);
-            padding: 30px;
-            width: 300px;
-            box-shadow: var(--shadow-subtle);
-            text-align: left;
-        }
-
-        .price-main {
-            font-size: 36px;
-            font-weight: bold;
-            color: var(--shopify-dark);
-            margin: 10px 0 5px;
-        }
-
-        .trial-info {
-            color: var(--shopify-green);
-            margin-bottom: 25px;
-            font-size: 14px;
-        }
-
-        .pricing-card ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-        }
-
-        .pricing-card ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--gray-100);
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
+        .pricing {
+            padding: 80px 0;
         }
         
-        /* FAQ/Guide Section (Accordion) */
-        #guide {
-            background-color: var(--white);
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
-
-        .faq-item {
-            margin-bottom: 12px;
-            border: 1px solid var(--gray-300);
-            border-radius: var(--radius-md);
+        
+        .pricing-card {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .faq-question {
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(33, 43, 54, 0.1);
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--shopify-green);
+            position: relative;
+        }
+        
+        .pricing-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--shopify-green);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .plan-name {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .plan-price {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--shopify-green);
+        }
+        
+        .plan-price span {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        
+        .plan-billing {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .plan-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .plan-features li::before {
+            content: "✓";
+            color: var(--shopify-green);
+            margin-right: 10px;
+        }
+        
+        /* Guide Section */
+        .guide {
+            padding: 80px 0;
+            background-color: #f9fafb;
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: var(--shadow);
+        }
+        
+        .accordion-header {
+            padding: 20px;
+            background-color: white;
+            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            cursor: pointer;
-            font-size: 1.1rem;
             font-weight: 600;
-            color: var(--shopify-dark);
-            transition: background-color 0.2s;
+            transition: background-color 0.3s ease;
         }
         
-        .faq-question:hover {
-             background-color: var(--gray-100);
+        .accordion-header:hover {
+            background-color: var(--shopify-light-green);
         }
-
-        .faq-answer {
+        
+        .accordion-header.active {
+            background-color: var(--shopify-light-green);
+        }
+        
+        .accordion-indicator {
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-header.active .accordion-indicator {
+            transform: rotate(45deg);
+        }
+        
+        .accordion-body {
             padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-            border-top: 1px solid var(--gray-300);
+            transition: max-height 0.3s ease, padding 0.3s ease;
         }
         
-        .faq-answer p {
-            padding: 15px 0;
+        .accordion-body.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--shopify-light-green);
+        }
+        
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-description {
             color: var(--text-light);
-            margin-bottom: 0;
+            margin-bottom: 40px;
         }
         
-        .faq-question:after {
-            content: '+';
-            font-size: 1.5rem;
-            color: var(--shopify-green); 
-            transition: transform 0.2s;
-        }
-        
-        .faq-question.active:after {
-            content: '-';
-        }
-
         /* Footer */
         footer {
-            background-color: var(--shopify-dark);
-            color: var(--gray-300);
-            padding: 40px 0;
-            text-align: center;
-            font-size: 14px;
+            padding: 60px 0 30px;
+            background-color: var(--text-dark);
+            color: white;
         }
-
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
         .footer-links a {
-            color: var(--gray-300);
-            margin: 0 10px;
-            text-decoration: underline;
+            color: #a9b3be;
+            transition: color 0.3s ease;
         }
         
-        /* Media Queries */
-        @media (max-width: 992px) {
-            .hero-layout, .pricing-cards-container {
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            padding-top: 30px;
+            text-align: center;
+            border-top: 1px solid #3b404a;
+            font-size: 14px;
+            color: #a9b3be;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .header-container {
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
+                gap: 15px;
             }
-            .hero-content, .hero-image, .pricing-card {
-                max-width: 100%;
-            }
-            .hero-content {
-                max-width: 600px;
-            }
-            .hero-cta {
+            
+            .header-right {
+                display: flex;
+                width: 100%;
                 justify-content: center;
+                gap: 10px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .hero-cta .cta-button, .hero-cta .login-button {
+                width: 100%;
             }
         }
-        
     </style>
 </head>
 <body>
-    
     <header>
-        <div class="container header-content">
-            <a href="#hero" class="logo">
-                Shopify<span>Guide</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#guide">Guide</a></li> 
-                </ul>
-            </nav>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Shopify<span>Blueprint</span></a>
+            <div class="nav-menu">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#guide">Step-by-Step Guide</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+            <div class="header-right">
+                <a href="https://shopify.com" class="login-button">Log In</a>
+                <a href="[ВАША АФФИЛИАТ-ССЫЛКА]" class="cta-button">Start Free Trial</a>
+            </div>
         </div>
     </header>
 
-    <section id="hero" class="section">
-        <div class="container hero-layout">
+    <section class="hero">
+        <div class="container">
             <div class="hero-content">
-                <h1>Shopify Dropshipping: Your Complete Blueprint to E-commerce Success</h1>
-                <p>Learn how to launch your profitable dropshipping business from scratch. A comprehensive, step-by-step roadmap for niche selection, product sourcing, and Shopify store setup.</p>
+                <h1>The Complete Shopify Dropshipping Blueprint</h1>
+                <p class="hero-subtitle">Everything you need to build a profitable dropshipping business with Shopify in 2025</p>
                 <div class="hero-cta">
-                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Start Free Trial (3 Days)</a>
-                    <a href="#guide" class="btn btn-outline">View Full Guide</a>
+                    <a href="[ВАША АФФИЛИАТ-ССЫЛКА]" class="cta-button">Start Your Free Trial</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/500x400?text=E-commerce+Success+Visual" alt="Visual representation of a successful Shopify store setup">
+            <img src="https://cdn.shopify.com/s/files/1/0070/7032/files/how-to-dropship-on-shopify.png" alt="Shopify Dropshipping" class="hero-image">
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Shopify for Dropshipping</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Quick & Easy Setup</h3>
+                    <p class="feature-description">Launch your dropshipping store in minutes with Shopify's intuitive platform. No coding or design skills required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3 class="feature-title">Seamless Integrations</h3>
+                    <p class="feature-description">Connect with top dropshipping suppliers like DSers, Spocket, and Oberlo to import products with just one click.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile-Ready Design</h3>
+                    <p class="feature-description">All Shopify stores are fully responsive, ensuring your customers have a perfect experience on any device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Comprehensive Analytics</h3>
+                    <p class="feature-description">Track your store's performance with powerful built-in analytics and optimize for higher conversion rates.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="section">
+    <section id="pricing" class="pricing">
         <div class="container">
-            <h2>Choose Your Ideal Shopify Plan</h2>
-            <p>Start with a 3-day free trial, then enjoy $1/month for the first 3 months. Your journey to scaling starts here.</p>
-
-            <div class="pricing-cards-container">
-                
+            <h2 class="section-title">Choose the Right Plan for Your Business</h2>
+            <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Basic</h3>
-                    <div class="price-main">$29</div>
-                    <p>Billed monthly</p>
-                    <div class="trial-info">3 days free, then $1/mo for 3 months</div>
-                    <ul>
-                        <li>2 Staff accounts</li>
+                    <h3 class="plan-name">Basic</h3>
+                    <div class="plan-price">$39<span>/mo</span></div>
+                    <div class="plan-billing">3-day free trial</div>
+                    <ul class="plan-features">
+                        <li>Online store with ecommerce features</li>
                         <li>Unlimited product listings</li>
-                        <li>Basic reporting</li>
-                        <li>Discount codes</li>
+                        <li>24/7 customer support</li>
+                        <li>2 staff accounts</li>
+                        <li>Up to 1,000 inventory locations</li>
                     </ul>
-                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Start Plan</a>
+                    <a href="[ВАША АФФИЛИАТ-ССЫЛКА]" class="cta-button">Start Basic Plan</a>
                 </div>
-
-                <div class="pricing-card">
-                    <h3>Shopify</h3>
-                    <div class="price-main">$79</div>
-                    <p>Billed monthly</p>
-                    <div class="trial-info">3 days free, then $1/mo for 3 months</div>
-                    <ul>
-                        <li>5 Staff accounts</li>
+                <div class="pricing-card featured">
+                    <h3 class="plan-name">Shopify</h3>
+                    <div class="plan-price">$105<span>/mo</span></div>
+                    <div class="plan-billing">3-day free trial</div>
+                    <ul class="plan-features">
+                        <li>Everything in Basic</li>
                         <li>Professional reports</li>
-                        <li>Gift cards</li>
+                        <li>5 staff accounts</li>
                         <li>Lower transaction fees</li>
+                        <li>International pricing</li>
+                        <li>Up to 1,000 inventory locations</li>
                     </ul>
-                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Start Plan</a>
+                    <a href="[ВАША АФФИЛИАТ-ССЫЛКА]" class="cta-button">Start Shopify Plan</a>
                 </div>
-
                 <div class="pricing-card">
-                    <h3>Advanced</h3>
-                    <div class="price-main">$299</div>
-                    <p>Billed monthly</p>
-                    <div class="trial-info">3 days free, then $1/mo for 3 months</div>
-                    <ul>
-                        <li>15 Staff accounts</li>
-                        <li>Advanced report builder</li>
+                    <h3 class="plan-name">Advanced</h3>
+                    <div class="plan-price">$399<span>/mo</span></div>
+                    <div class="plan-billing">3-day free trial</div>
+                    <ul class="plan-features">
+                        <li>Everything in Shopify plan</li>
+                        <li>Advanced reports</li>
+                        <li>15 staff accounts</li>
                         <li>Third-party calculated shipping rates</li>
-                        <li>Lowest transaction fees</li>
+                        <li>Custom report builder</li>
+                        <li>Up to 1,000 inventory locations</li>
                     </ul>
-                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Start Plan</a>
+                    <a href="[ВАША АФФИЛИАТ-ССЫЛКА]" class="cta-button">Start Advanced Plan</a>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="guide" class="section">
+    <section id="guide" class="guide">
         <div class="container">
-            <h2>Your 8-Step Dropshipping Roadmap</h2>
-            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">Click on each step to reveal the detailed action plan.</p>
-            
-            <div class="faq-item">
-                <div class="faq-question">Step 1: Niche Selection and Market Research</div>
-                <div class="faq-answer">
-                    <p>Identify what you will sell. Look for products with high margins, low competition, and a "wow factor." This is the most crucial stage. Use trend analysis tools to confirm demand.</p>
+            <h2 class="section-title">Step-by-Step Dropshipping Guide</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 1: Set Up Your Shopify Store</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Begin by signing up for Shopify's 3-day free trial. Choose a theme that matches your brand vision and customize it to stand out from competitors. Focus on creating a clean, professional look that builds customer trust.</p>
+                        <p>Key steps:</p>
+                        <ul>
+                            <li>Sign up at Shopify.com</li>
+                            <li>Choose and customize your theme</li>
+                            <li>Set up essential pages (About, Contact, FAQ, etc.)</li>
+                            <li>Configure payment processors</li>
+                        </ul>
+                        <p><a href="[ВАША АФФИЛИАТ-ССЫЛКА]">Start your Shopify store now</a></p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 2: Find Your Niche and Products</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Research profitable niches with high demand and lower competition. Consider product criteria like solving a specific problem, having profit margin potential of at least 30%, and being non-seasonal to ensure year-round sales.</p>
+                        <p>Effective methods for finding winning products:</p>
+                        <ul>
+                            <li>Research trending products on social media</li>
+                            <li>Analyze competitors' best-sellers</li>
+                            <li>Use product research tools like Ecomhunt or Sell The Trend</li>
+                            <li>Study Google Trends for rising products</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 3: Connect with Suppliers</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Find reliable suppliers that offer quality products, fast shipping, and good communication. Install a dropshipping app from the Shopify App Store to connect with suppliers and import products to your store.</p>
+                        <p>Recommended dropshipping apps:</p>
+                        <ul>
+                            <li>DSers - AliExpress Dropshipping</li>
+                            <li>Spocket (US and EU suppliers)</li>
+                            <li>Oberlo (now part of DSers)</li>
+                            <li>CJDropshipping</li>
+                        </ul>
+                        <p>When importing products, remember to optimize titles, descriptions, and images for higher conversion rates.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 4: Optimize Your Store for Conversions</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Create a shopping experience that converts visitors into customers. Focus on professional product photography, compelling descriptions, and trust elements throughout your store.</p>
+                        <p>Essential optimization elements:</p>
+                        <ul>
+                            <li>Clear, benefit-focused product descriptions</li>
+                            <li>High-quality images and videos</li>
+                            <li>Customer reviews and testimonials</li>
+                            <li>Trust badges and security certificates</li>
+                            <li>Simplified checkout process</li>
+                            <li>Mobile-friendly design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 5: Market Your Dropshipping Store</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Drive targeted traffic to your store using multiple marketing channels. Create a marketing strategy that includes both paid and organic methods.</p>
+                        <p>Effective marketing strategies:</p>
+                        <ul>
+                            <li>Facebook and Instagram ads</li>
+                            <li>Google Shopping ads</li>
+                            <li>Influencer marketing</li>
+                            <li>Email marketing campaigns</li>
+                            <li>Content marketing and SEO</li>
+                            <li>TikTok and Pinterest promotion</li>
+                        </ul>
+                        <p>Start with a small budget and scale what works while cutting what doesn't.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 6: Fulfill Orders and Provide Customer Support</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Once orders come in, efficiently process them through your chosen dropshipping app. Keep customers informed throughout the shipping process and provide exceptional support.</p>
+                        <p>Best practices:</p>
+                        <ul>
+                            <li>Process orders within 24 hours</li>
+                            <li>Send tracking information automatically</li>
+                            <li>Set up shipping notification emails</li>
+                            <li>Respond to customer inquiries quickly</li>
+                            <li>Create a clear return and refund policy</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 7: Scale Your Business</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Once you've established a profitable store, it's time to scale. Reinvest profits into expanding your product range, improving marketing, and automating processes.</p>
+                        <p>Scaling strategies:</p>
+                        <ul>
+                            <li>Add complementary products to increase average order value</li>
+                            <li>Upgrade to a higher Shopify plan for more features</li>
+                            <li>Hire virtual assistants for customer service</li>
+                            <li>Expand to new marketing channels</li>
+                            <li>Implement email marketing automation</li>
+                            <li>Consider working with faster shipping suppliers</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Step 2: Shopify Store Setup and Branding</div>
-                <div class="faq-answer">
-                    <p>Register quickly, choose a memorable domain name, and install a professional theme. Essential settings must be configured correctly for a sustainable dropshipping business and to prevent issues.</p>
-                </div>
-            </div>
+        </div>
+    </section>
 
-            <div class="faq-item">
-                <div class="faq-question">Step 3: Sourcing Winning Products and Suppliers</div>
-                <div class="faq-answer">
-                    <p>Use platforms like AliExpress or specialized apps. Key factors are product quality and reliable shipping speed. We recommend a shortlist of verified, fast suppliers.</p>
-                </div>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Dropshipping Journey?</h2>
+                <p class="cta-description">Join over 2 million entrepreneurs who are building successful businesses with Shopify. Start your 3-day free trial today.</p>
+                <a href="[ВАША АФФИЛИАТ-ССЫЛКА]" class="cta-button">Launch Your Shopify Store</a>
             </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Step 4: Product Page Optimization (SEO)</div>
-                <div class="faq-answer">
-                    <p>Write compelling descriptions, use high-quality photos, and optimize headlines and meta tags for search engines. This is the foundation for generating free, organic traffic.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Step 5: Marketing Strategy and Traffic Generation</div>
-                <div class="faq-answer">
-                    <p>Develop a focused marketing plan. Utilize platforms like TikTok, Facebook Ads, or Google Ads. Start small, test different angles, and scale what works. Consider using affiliate marketing programs.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Step 6: Conversion Rate Optimization (CRO)</div>
-                <div class="faq-answer">
-                    <p>Analyze user behavior and optimize your store for maximum sales. Improve page load speed, use high-quality product videos, and implement scarcity tactics (e.g., limited stock).</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Step 7: Customer Service and Fulfillment</div>
-                <div class="faq-answer">
-                    <p>Set up clear policies for shipping and returns. Provide excellent customer support to build trust and repeat business. Implement automatic order fulfillment tools to save time.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Step 8: Scaling and Automation</div>
-                <div class="faq-answer">
-                    <p>Once profitable, reinvest in winning ads, hire virtual assistants, and automate key processes (like email marketing and fulfillment) to free up your time for strategic decisions.</p>
-                </div>
-            </div>
-            
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Shopify Dropshipping Guide. All rights reserved. </p>
-            <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#guide">Step-by-Step Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Dropshipping Suppliers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shopify Blueprint. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling;
-                    const isActive = question.classList.contains('active');
 
-                    // Close all open answers
-                    document.querySelectorAll('.faq-question').forEach(q => {
-                        q.classList.remove('active');
-                        q.nextElementSibling.style.maxHeight = null;
-                        q.nextElementSibling.style.padding = '0 20px';
-                    });
-                    
-                    // Open the clicked answer
-                    if (!isActive) {
-                        question.classList.add('active');
-                        // Calculate max height dynamically
-                        answer.style.maxHeight = answer.scrollHeight + 30 + "px"; // +30 for padding
-                        answer.style.padding = '0 20px 15px';
+    <script>
+        // Accordion functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                const accordionBody = header.nextElementSibling;
+                
+                // Toggle active class
+                header.classList.toggle('active');
+                accordionBody.classList.toggle('active');
+                
+                // Close other accordion items
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        otherHeader.classList.remove('active');
+                        otherHeader.nextElementSibling.classList.remove('active');
                     }
                 });
             });
