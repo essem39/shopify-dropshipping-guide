@@ -161,6 +161,14 @@
             height: auto;
             border-radius: 8px;
             box-shadow: var(--shadow);
+            /* Добавляем плавность для hover-эффекта */
+            transition: transform 0.4s ease-in-out; 
+        }
+        
+        /* НОВЫЙ ЭФФЕКТ: Увеличение при наведении */
+        .hero-image:hover {
+            transform: scale(1.02); 
+            cursor: pointer; 
         }
         
         /* Features Section */
@@ -742,7 +750,6 @@
                     </div>
                     <div class="accordion-body">
                         <p>Once you've established a profitable store, it's time to scale. Reinvest profits into expanding your product range, improving marketing, and automating processes.</p>
-                        <p>Scaling strategies:</p>
                         <ul>
                             <li>Add complementary products to increase average order value</li>
                             <li>Upgrade to a higher Shopify plan for more features</li>
