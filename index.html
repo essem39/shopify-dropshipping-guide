@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Полное A-Z руководство по Shopify Dropshipping 2024. Узнайте, как начать свой бизнес, найти продукты и настроить магазин пошагово.">
-    <meta name="keywords" content="shopify dropshipping, дропшиппинг 2024, как начать dropshipping, руководство shopify, пошаговый план">
-    <title>Shopify Dropshipping Guide 2024: A-Z Step-by-Step Tutorial</title>
+    <meta name="description" content="Launch your profitable Shopify dropshipping business in 8 simple steps. Find winning products, set up your store, and scale with proven strategies.">
+    <meta name="keywords" content="shopify dropshipping, dropshipping guide 2024, how to start dropshipping, shopify blueprint, step-by-step plan">
+    <title>Shopify Dropshipping Guide 2024: The A-Z Roadmap to Success</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Base Styles (Очищено от ярких акцентов) */
+        /* Base Styles */
         :root {
-            --shopify-green: #008060; /* Главный цвет Shopify */
+            --shopify-green: #008060; 
             --shopify-dark: #212326;
-            --shopify-light: #f4f6f8;
             --text-dark: #212326;
             --text-light: #6b7177;
             --white: #ffffff;
             --gray-100: #f9fafb;
-            --gray-200: #eef2f5; 
             --gray-300: #d3d9e0;
-            --radius-md: 4px; /* Более строгие, меньшие скругления */
-            --shadow-subtle: 0 1px 2px rgba(0,0,0,0.05); /* Легкая тень */
+            --radius-md: 8px; /* Softer radius for modern look */
+            --shadow-subtle: 0 4px 10px rgba(0,0,0,0.06); 
         }
         
         * {
@@ -40,19 +38,19 @@
             background-color: var(--white);
         }
         
-        a {
-            text-decoration: none;
-            color: var(--shopify-green);
-            transition: color 0.3s ease;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
         
         /* Typography */
-        h1, h2, h3, h4, h5 {
-            font-weight: 700; /* Немного менее жирный */
+        h1, h2, h3 {
+            font-weight: 700; 
             line-height: 1.2;
         }
         
-        /* Buttons (Чистый стиль Shopify) */
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -69,11 +67,10 @@
         .btn-primary {
             background-color: var(--shopify-green); 
             color: var(--white);
-            box-shadow: none; /* Убираем яркую тень */
         }
         
         .btn-primary:hover {
-            background-color: #006e52; /* Чуть темнее зеленый */
+            background-color: #006e52; 
         }
         
         .btn-outline {
@@ -89,12 +86,46 @@
         
         /* Header */
         header {
+            padding: 20px 0;
             box-shadow: var(--shadow-subtle);
         }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--shopify-dark);
+        }
 
-        /* Hero Section (Чистый, высокий контраст) */
+        .logo span {
+            color: var(--shopify-green);
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: var(--text-dark);
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        /* Hero Section */
+        .section {
+            padding: 80px 0;
+        }
+
         #hero {
-            background-color: var(--white); /* Белый фон */
+            background-color: var(--white); 
             padding: 100px 0; 
         }
 
@@ -112,57 +143,140 @@
         
         .hero-image img {
             border-radius: var(--radius-md);
-            box-shadow: var(--shadow-subtle); /* Легкая тень */
-            border: 1px solid var(--gray-300); /* Тонкая рамка */
+            box-shadow: var(--shadow-subtle); 
+            border: 1px solid var(--gray-300);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
         }
         
         /* Pricing Section */
+
         #pricing {
-            padding: 80px 0;
-            background-color: var(--gray-100); /* Очень светлый фон */
+            background-color: var(--gray-100);
             text-align: center;
         }
 
+        .pricing-cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
         .pricing-card {
+            background-color: var(--white);
             border: 1px solid var(--gray-300);
-            box-shadow: var(--shadow-subtle); 
+            border-radius: var(--radius-md);
+            padding: 30px;
+            width: 300px;
+            box-shadow: var(--shadow-subtle);
+            text-align: left;
+        }
+
+        .price-main {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--shopify-dark);
+            margin: 10px 0 5px;
+        }
+
+        .trial-info {
+            color: var(--shopify-green);
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .pricing-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-100);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
         }
         
-        /* FAQ Section (Динамичный Аккордеон) */
-        #faq {
+        /* FAQ/Guide Section (Accordion) */
+        #guide {
             background-color: var(--white);
-            padding: 80px 0;
         }
 
         .faq-item {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             border: 1px solid var(--gray-300);
             border-radius: var(--radius-md);
-            background-color: var(--white);
         }
 
         .faq-question {
-            /* ... стили вопроса ... */
-            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--shopify-dark);
+            transition: background-color 0.2s;
+        }
+        
+        .faq-question:hover {
+             background-color: var(--gray-100);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            border-top: 1px solid var(--gray-300);
+        }
+        
+        .faq-answer p {
+            padding: 15px 0;
+            color: var(--text-light);
+            margin-bottom: 0;
         }
         
         .faq-question:after {
             content: '+';
-            color: var(--shopify-green); /* Зеленый акцент на +/- */
+            font-size: 1.5rem;
+            color: var(--shopify-green); 
+            transition: transform 0.2s;
         }
         
         .faq-question.active:after {
             content: '-';
         }
+
+        /* Footer */
+        footer {
+            background-color: var(--shopify-dark);
+            color: var(--gray-300);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
         
-        /* Media Queries - Адаптивность */
-        @media (max-width: 768px) {
-            .hero-layout {
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .hero-layout, .pricing-cards-container {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
             }
-            .hero-content, .hero-image {
+            .hero-content, .hero-image, .pricing-card {
                 max-width: 100%;
+            }
+            .hero-content {
+                max-width: 600px;
             }
             .hero-cta {
                 justify-content: center;
@@ -175,14 +289,14 @@
     
     <header>
         <div class="container header-content">
-            <a href="#" class="logo">
+            <a href="#hero" class="logo">
                 Shopify<span>Guide</span>
             </a>
             <nav>
                 <ul>
-                    <li><a href="#hero">Начало</a></li>
-                    <li><a href="#pricing">Тарифы</a></li>
-                    <li><a href="#faq">Инструкция / FAQ</a></li> 
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#guide">Guide</a></li> 
                 </ul>
             </nav>
         </div>
@@ -191,99 +305,130 @@
     <section id="hero" class="section">
         <div class="container hero-layout">
             <div class="hero-content">
-                <h1>Shopify Dropshipping 2024: Ваш A-Z Гид к Успеху</h1>
-                <p>Узнайте, как начать свой прибыльный dropshipping-бизнес с нуля. Полное, пошаговое руководство по выбору ниши, поиску продуктов и настройке магазина Shopify.</p>
+                <h1>Shopify Dropshipping: Your Complete Blueprint to E-commerce Success</h1>
+                <p>Learn how to launch your profitable dropshipping business from scratch. A comprehensive, step-by-step roadmap for niche selection, product sourcing, and Shopify store setup.</p>
                 <div class="hero-cta">
-                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Начать Пробный Период (3 дня)</a>
-                    <a href="#faq" class="btn btn-outline">Посмотреть Инструкцию</a>
+                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Start Free Trial (3 Days)</a>
+                    <a href="#guide" class="btn btn-outline">View Full Guide</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/500x400?text=Professional+Ecommerce+Setup" alt="Визуализация успешного магазина Shopify">
+                <img src="https://via.placeholder.com/500x400?text=E-commerce+Success+Visual" alt="Visual representation of a successful Shopify store setup">
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="pricing-section">
+    <section id="pricing" class="section">
         <div class="container">
-            <h2>Выберите свой план Shopify</h2>
-            <p>Начните с 3 дней бесплатного доступа, а затем платите всего $1/месяц за первые 3 месяца. Ваш путь к успеху начинается здесь.</p>
+            <h2>Choose Your Ideal Shopify Plan</h2>
+            <p>Start with a 3-day free trial, then enjoy $1/month for the first 3 months. Your journey to scaling starts here.</p>
 
             <div class="pricing-cards-container">
+                
                 <div class="pricing-card">
                     <h3>Basic</h3>
                     <div class="price-main">$29</div>
-                    <p>/месяц</p>
-                    <div class="trial-info" style="color: var(--shopify-green);">3 дня бесплатно, затем $1/мес. за 3 месяца</div>
+                    <p>Billed monthly</p>
+                    <div class="trial-info">3 days free, then $1/mo for 3 months</div>
                     <ul>
-                        <li><i class="fas fa-check"></i> 2 Сотрудника</li>
-                        <li><i class="fas fa-check"></i> Неограниченное количество товаров</li>
-                        <li><i class="fas fa-check"></i> Базовые отчеты</li>
-                        <li><i class="fas fa-check"></i> Скидочные коды</li>
+                        <li>2 Staff accounts</li>
+                        <li>Unlimited product listings</li>
+                        <li>Basic reporting</li>
+                        <li>Discount codes</li>
                     </ul>
-                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Начать пробный период</a>
+                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Start Plan</a>
                 </div>
 
                 <div class="pricing-card">
                     <h3>Shopify</h3>
                     <div class="price-main">$79</div>
-                    <p>/месяц</p>
-                    <div class="trial-info" style="color: var(--shopify-green);">3 дня бесплатно, затем $1/мес. за 3 месяца</div>
+                    <p>Billed monthly</p>
+                    <div class="trial-info">3 days free, then $1/mo for 3 months</div>
                     <ul>
-                        <li><i class="fas fa-check"></i> 5 Сотрудников</li>
-                        <li><i class="fas fa-check"></i> Профессиональные отчеты</li>
-                        <li><i class="fas fa-check"></i> Подарочные карты</li>
-                        <li><i class="fas fa-check"></i> Низкая комиссия за транзакции</li>
+                        <li>5 Staff accounts</li>
+                        <li>Professional reports</li>
+                        <li>Gift cards</li>
+                        <li>Lower transaction fees</li>
                     </ul>
-                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Начать пробный период</a>
+                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Start Plan</a>
                 </div>
 
                 <div class="pricing-card">
                     <h3>Advanced</h3>
                     <div class="price-main">$299</div>
-                    <p>/месяц</p>
-                    <div class="trial-info" style="color: var(--shopify-green);">3 дня бесплатно, затем $1/мес. за 3 месяца</div>
+                    <p>Billed monthly</p>
+                    <div class="trial-info">3 days free, then $1/mo for 3 months</div>
                     <ul>
-                        <li><i class="fas fa-check"></i> 15 Сотрудников</li>
-                        <li><i class="fas fa-check"></i> Расширенные отчеты</li>
-                        <li><i class="fas fa-check"></i> Калькулятор сторонних тарифов</li>
-                        <li><i class="fas fa-check"></i> Самая низкая комиссия</li>
+                        <li>15 Staff accounts</li>
+                        <li>Advanced report builder</li>
+                        <li>Third-party calculated shipping rates</li>
+                        <li>Lowest transaction fees</li>
                     </ul>
-                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Начать пробный период</a>
+                    <a href="https://www.shopify.com/free-trial" target="_blank" class="btn btn-primary">Start Plan</a>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="faq" class="section">
+    <section id="guide" class="section">
         <div class="container">
-            <h2>Пошаговая Инструкция (Нажмите, чтобы раскрыть)</h2>
+            <h2>Your 8-Step Dropshipping Roadmap</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">Click on each step to reveal the detailed action plan.</p>
             
             <div class="faq-item">
-                <div class="faq-question">Шаг 1: Выбор Ниши и Анализ Рынка</div>
+                <div class="faq-question">Step 1: Niche Selection and Market Research</div>
                 <div class="faq-answer">
-                    <p>Определите, что вы будете продавать. Ищите товары с высокой маржой, низкой конкуренцией и "вау-эффектом". Это самый важный этап, где нужно уделить 80% времени. Используйте инструменты для анализа трендов.</p>
+                    <p>Identify what you will sell. Look for products with high margins, low competition, and a "wow factor." This is the most crucial stage. Use trend analysis tools to confirm demand.</p>
                 </div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">Шаг 2: Создание и Настройка Магазина на Shopify</div>
+                <div class="faq-question">Step 2: Shopify Store Setup and Branding</div>
                 <div class="faq-answer">
-                    <p>Пройдите быструю регистрацию, выберите доменное имя и установите профессиональную тему. Мы покажем, какие настройки критичны для dropshipping-бизнеса, чтобы избежать блокировок.</p>
+                    <p>Register quickly, choose a memorable domain name, and install a professional theme. Essential settings must be configured correctly for a sustainable dropshipping business and to prevent issues.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Шаг 3: Поиск Надежных Поставщиков и Продуктов</div>
+                <div class="faq-question">Step 3: Sourcing Winning Products and Suppliers</div>
                 <div class="faq-answer">
-                    <p>Используйте сервисы вроде AliExpress или специализированные приложения. Главное – скорость доставки и качество товара. Мы дадим список проверенных поставщиков, которые работают быстро и надежно.</p>
+                    <p>Use platforms like AliExpress or specialized apps. Key factors are product quality and reliable shipping speed. We recommend a shortlist of verified, fast suppliers.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Шаг 4: Оптимизация Продуктовых Страниц (SEO)</div>
+                <div class="faq-question">Step 4: Product Page Optimization (SEO)</div>
                 <div class="faq-answer">
-                    <p>Напишите убедительные описания, сделайте качественные фото и оптимизируйте заголовки для поисковых систем. Это ключ к бесплатному трафику и высоким конверсиям. (Как вы и делаете с VipDrive).</p>
+                    <p>Write compelling descriptions, use high-quality photos, and optimize headlines and meta tags for search engines. This is the foundation for generating free, organic traffic.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Step 5: Marketing Strategy and Traffic Generation</div>
+                <div class="faq-answer">
+                    <p>Develop a focused marketing plan. Utilize platforms like TikTok, Facebook Ads, or Google Ads. Start small, test different angles, and scale what works. Consider using affiliate marketing programs.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Step 6: Conversion Rate Optimization (CRO)</div>
+                <div class="faq-answer">
+                    <p>Analyze user behavior and optimize your store for maximum sales. Improve page load speed, use high-quality product videos, and implement scarcity tactics (e.g., limited stock).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Step 7: Customer Service and Fulfillment</div>
+                <div class="faq-answer">
+                    <p>Set up clear policies for shipping and returns. Provide excellent customer support to build trust and repeat business. Implement automatic order fulfillment tools to save time.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Step 8: Scaling and Automation</div>
+                <div class="faq-answer">
+                    <p>Once profitable, reinvest in winning ads, hire virtual assistants, and automate key processes (like email marketing and fulfillment) to free up your time for strategic decisions.</p>
                 </div>
             </div>
             
@@ -292,10 +437,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Shopify Dropshipping Guide. Все права защищены. </p>
-            <div class="footer-links">
-                <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a>
-            </div>
+            <p>&copy; 2024 Shopify Dropshipping Guide. All rights reserved. </p>
         </div>
     </footer>
     
@@ -307,17 +449,18 @@
                     const answer = question.nextElementSibling;
                     const isActive = question.classList.contains('active');
 
-                    // Закрыть все, кроме текущего
+                    // Close all open answers
                     document.querySelectorAll('.faq-question').forEach(q => {
                         q.classList.remove('active');
                         q.nextElementSibling.style.maxHeight = null;
                         q.nextElementSibling.style.padding = '0 20px';
                     });
                     
-                    // Открыть или закрыть текущий
+                    // Open the clicked answer
                     if (!isActive) {
                         question.classList.add('active');
-                        answer.style.maxHeight = answer.scrollHeight + 30 + "px"; // +30 для отступов P
+                        // Calculate max height dynamically
+                        answer.style.maxHeight = answer.scrollHeight + 30 + "px"; // +30 for padding
                         answer.style.padding = '0 20px 15px';
                     }
                 });
