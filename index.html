@@ -159,9 +159,7 @@
             margin-top: 60px;
             max-width: 100%;
             height: auto;
-            /* Изменение для уменьшения размера картинки */
-            max-height: 450px; 
-            object-fit: contain; 
+            /* СТАРЫЙ КОД: Без ограничения max-height */
             border-radius: 8px;
             box-shadow: var(--shadow);
             transition: transform 0.4s ease-in-out; 
@@ -456,4 +454,377 @@
             margin-bottom: 20px;
         }
 
-        .policy-
+        .policy-date, .terms-date {
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .policy-section, .terms-section {
+            margin-bottom: 40px;
+        }
+
+        .policy-section-title, .terms-section-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .policy-section p, .terms-section p {
+            margin-bottom: 15px;
+        }
+
+        .policy-section ul, .policy-section ol, .terms-section ul, .terms-section ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .policy-section li, .terms-section li {
+            margin-bottom: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .header-right {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .hero-cta .cta-button, .hero-cta .login-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Shopify<span>Blueprint</span></a>
+            <div class="nav-menu">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#guide">Step-by-Step Guide</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+            <div class="header-right">
+                <a href="https://shopify.com" class="login-button">Log In</a>
+                <a href="[ВСТАВЬТЕ СЮДА ВАШУ АФФИЛИАТ-ССЫЛКУ]" class="cta-button">Start Free Trial</a>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The Complete Shopify Dropshipping Blueprint</h1>
+                <p class="hero-subtitle">Everything you need to build a profitable dropshipping business with Shopify in 2025</p>
+                <div class="hero-cta">
+                    <a href="[ВСТАВЬТЕ СЮДА ВАШУ АФФИЛИАТ-ССЫЛКУ]" class="cta-button">Start Your Free Trial</a>
+                </div>
+            </div>
+            <img src="hero-image.jpg" alt="Shopify Dropshipping Management Dashboard" class="hero-image">
+        </div>
+    </section>
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Shopify for Dropshipping</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Quick & Easy Setup</h3>
+                    <p class="feature-description">Launch your dropshipping store in minutes with Shopify's intuitive platform. No coding or design skills required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3 class="feature-title">Seamless Integrations</h3>
+                    <p class="feature-description">Connect with top dropshipping suppliers like DSers, Spocket, and Oberlo to import products with just one click.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile-Ready Design</h3>
+                    <p class="feature-description">All Shopify stores are fully responsive, ensuring your customers have a perfect experience on any device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Comprehensive Analytics</h3>
+                    <p class="feature-description">Track your store's performance with powerful built-in analytics and optimize for higher conversion rates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Global Reach & Localization</h3>
+                    <p class="feature-description">Easily sell in multiple currencies and languages, accessing a global customer base without complex configuration.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">Affiliate & Marketing Tools</h3>
+                    <p class="feature-description">Shopify integrates with all major affiliate and marketing platforms to help you scale your business through partnerships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Choose the Right Plan for Your Business</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Basic</h3>
+                    <div class="plan-price">$39<span>/mo</span></div>
+                    <div class="plan-billing">3-day free trial</div>
+                    <ul class="plan-features">
+                        <li>Online store with ecommerce features</li>
+                        <li>Unlimited product listings</li>
+                        <li>24/7 customer support</li>
+                        <li>2 staff accounts</li>
+                        <li>Up to 1,000 inventory locations</li>
+                    </ul>
+                    <a href="[ВСТАВЬТЕ СЮДА ВАШУ АФФИЛИАТ-ССЫЛКУ]" class="cta-button">Start Basic Plan</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3 class="plan-name">Shopify</h3>
+                    <div class="plan-price">$105<span>/mo</span></div>
+                    <div class="plan-billing">3-day free trial</div>
+                    <ul class="plan-features">
+                        <li>Everything in Basic</li>
+                        <li>Professional reports</li>
+                        <li>5 staff accounts</li>
+                        <li>Lower transaction fees</li>
+                        <li>International pricing</li>
+                        <li>Up to 1,000 inventory locations</li>
+                    </ul>
+                    <a href="[ВСТАВЬТЕ СЮДА ВАШУ АФФИЛИАТ-ССЫЛКУ]" class="cta-button">Start Shopify Plan</a>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="plan-name">Advanced</h3>
+                    <div class="plan-price">$399<span>/mo</span></div>
+                    <div class="plan-billing">3-day free trial</div>
+                    <ul class="plan-features">
+                        <li>Everything in Shopify plan</li>
+                        <li>Advanced reports</li>
+                        <li>15 staff accounts</li>
+                        <li>Third-party calculated shipping rates</li>
+                        <li>Custom report builder</li>
+                        <li>Up to 1,000 inventory locations</li>
+                    </ul>
+                    <a href="[ВСТАВЬТЕ СЮДА ВАШУ АФФИЛИАТ-ССЫЛКУ]" class="cta-button">Start Advanced Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="guide" class="guide">
+        <div class="container">
+            <h2 class="section-title">Step-by-Step Dropshipping Guide</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 1: Set Up Your Shopify Store</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Begin by signing up for Shopify's 3-day free trial. Choose a theme that matches your brand vision and customize it to stand out from competitors. Focus on creating a clean, professional look that builds customer trust.</p>
+                        <p>Key steps:</p>
+                        <ul>
+                            <li>Sign up at Shopify.com</li>
+                            <li>Choose and customize your theme</li>
+                            <li>Set up essential pages (About, Contact, FAQ, etc.)</li>
+                            <li>Configure payment processors</li>
+                        </ul>
+                        <p><a href="[ВСТАВЬТЕ СЮДА ВАШУ АФФИЛИАТ-ССЫЛКУ]">Start your Shopify store now</a></p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 2: Find Your Niche and Products</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Research profitable niches with high demand and lower competition. Consider product criteria like solving a specific problem, having profit margin potential of at least 30%, and being non-seasonal to ensure year-round sales.</p>
+                        <p>Effective methods for finding winning products:</p>
+                        <ul>
+                            <li>Research trending products on social media</li>
+                            <li>Analyze competitors' best-sellers</li>
+                            <li>Use product research tools like Ecomhunt or Sell The Trend</li>
+                            <li>Study Google Trends for rising products</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 3: Connect with Suppliers</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Find reliable suppliers that offer quality products, fast shipping, and good communication. Install a dropshipping app from the Shopify App Store to connect with suppliers and import products to your store.</p>
+                        <p>Recommended dropshipping apps:</p>
+                        <ul>
+                            <li>DSers - AliExpress Dropshipping</li>
+                            <li>Spocket (US and EU suppliers)</li>
+                            <li>Oberlo (now part of DSers)</li>
+                            <li>CJDropshipping</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 4: Optimize Your Store for Conversions</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Create a shopping experience that converts visitors into customers. Focus on professional product photography, compelling descriptions, and trust elements throughout your store.</p>
+                        <p>Essential optimization elements:</p>
+                        <ul>
+                            <li>Clear, benefit-focused product descriptions</li>
+                            <li>High-quality images and videos</li>
+                            <li>Customer reviews and testimonials</li>
+                            <li>Trust badges and security certificates</li>
+                            <li>Simplified checkout process</li>
+                            <li>Mobile-friendly design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 5: Market Your Dropshipping Store</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Drive targeted traffic to your store using multiple marketing channels. Create a marketing strategy that includes both paid and organic methods.</p>
+                        <ul>
+                            <li>Facebook and Instagram ads</li>
+                            <li>Google Shopping ads</li>
+                            <li>Influencer marketing</li>
+                            <li>Email marketing campaigns</li>
+                            <li>Content marketing and SEO</li>
+                            <li>TikTok and Pinterest promotion</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 6: Fulfill Orders and Provide Customer Support</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Once orders come in, efficiently process them through your chosen dropshipping app. Keep customers informed throughout the shipping process and provide exceptional support.</p>
+                        <p>Best practices:</p>
+                        <ul>
+                            <li>Process orders within 24 hours</li>
+                            <li>Send tracking information automatically</li>
+                            <li>Set up shipping notification emails</li>
+                            <li>Respond to customer inquiries quickly</li>
+                            <li>Create a clear return and refund policy</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Step 7: Scale Your Business</span>
+                        <span class="accordion-indicator">+</span>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Once you've established a profitable store, it's time to scale. Reinvest profits into expanding your product range, improving marketing, and automating processes.</p>
+                        <ul>
+                            <li>Add complementary products to increase average order value</li>
+                            <li>Upgrade to a higher Shopify plan for more features</li>
+                            <li>Hire virtual assistants for customer service</li>
+                            <li>Expand to new marketing channels</li>
+                            <li>Implement email marketing automation</li>
+                            <li>Consider working with faster shipping suppliers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Dropshipping Journey?</h2>
+                <p class="cta-description">Join over 2 million entrepreneurs who are building successful businesses with Shopify. Start your 3-day free trial today.</p>
+                <a href="[ВСТАВЬТЕ СЮДА ВАШУ АФФИЛИАТ-ССЫЛКУ]" class="cta-button">Launch Your Shopify Store</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#guide">Step-by-Step Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Dropshipping Suppliers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shopify Blueprint. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Accordion functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                const accordionBody = header.nextElementSibling;
+                
+                // Toggle active class
+                header.classList.toggle('active');
+                accordionBody.classList.toggle('active');
+                
+                // Close other accordion items
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        otherHeader.classList.remove('active');
+                        otherHeader.nextElementSibling.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
