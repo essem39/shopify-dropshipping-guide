@@ -1,955 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>Shopify Partner | Start Your E-commerce Journey</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* -------------------------------------------------------------------------- */
+    
+    <title>Shopify Dropshipping Guide 2024: A-Z Step-by-Step Tutorial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /* Стили для секции Цен (Pricing) - ОБЕСПЕЧИВАЮТ ВЫРАВНИВАНИЕ В РЯД. */
 /* -------------------------------------------------------------------------- */
 .pricing-section {
-    padding: 60px 20px;
-    background-color: #f8f8f8; /* Светлый фон для контраста */
-    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8; /* Светлый фон для контраста */
+    text-align: center;
 }
 
 .pricing-cards-container {
-    display: flex;       /* КРИТИЧНО: выстраивает карточки в ряд */
-    justify-content: center; /* Центрирует контейнер с карточками */
-    gap: 30px; /* Расстояние между карточками */
-    margin-top: 40px;
+    display: flex;       /* КРИТИЧНО: выстраивает карточки в ряд */
+    justify-content: center; /* Центрирует контейнер с карточками */
+    gap: 30px; /* Расстояние между карточками */
+    margin-top: 40px;
 }
 
 .pricing-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px; /* Скругленные углы */
-    padding: 30px;
-    width: 300px; /* КРИТИЧНО: задает фиксированную ширину карточки */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Легкая тень */
-    transition: transform 0.3s; /* Анимация при наведении */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Скругленные углы */
+    padding: 30px;
+    width: 300px; /* КРИТИЧНО: задает фиксированную ширину карточки */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Легкая тень */
+    transition: transform 0.3s; /* Анимация при наведении */
 }
 
 .pricing-card:hover {
-    transform: translateY(-5px); /* Приподнимает карточку при наведении */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px); /* Приподнимает карточку при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-card h3 {
-    color: #008060;
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: #008060;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .price-main {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
 }
 
 .trial-info {
-    color: #e30000;
-    margin-bottom: 20px;
-    font-size: 14px;
+    color: #e30000;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 .pricing-card ul li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #eee;
-    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    color: #555;
 }
 
 /* Стили кнопок (уже были в общих стилях, но для наглядности) */
 .cta-button {
-    display: block;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .cta-button.primary {
-    background-color: #008060;
-    color: white;
+    background-color: #008060;
+    color: white;
 }
 
 .cta-button.primary:hover {
-    background-color: #006b52;
+    background-color: #006b52;
 }
-        /* КОРРЕКЦИЯ ЦВЕТА ЗАГОЛОВКА СЕКЦИИ ЦЕН */
+        /* КОРРЕКЦИЯ ЦВЕТА ЗАГОЛОВКА СЕКЦИИ ЦЕН */
 #pricing h1, #pricing h2, #pricing p {
-    color: #1a1a1a !important; /* Устанавливаем темно-серый цвет (почти черный) и делаем его приоритетным */
+    color: #1a1a1a !important; /* Устанавливаем темно-серый цвет (почти черный) и делаем его приоритетным */
 }
 
 /* На всякий случай, если слово Shopify - это отдельный span: */
 #pricing span {
-    color: #1a1a1a !important;
+    color: #1a1a1a !important;
 }
-        /* -------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------- */
 /* МОБИЛЬНАЯ АДАПТАЦИЯ (Media Query) */
 /* -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-    /* 1. Секция с ценами: складываем карточки вертикально */
-    .pricing-cards-container {
-        flex-direction: column; /* Элементы теперь складываются друг под другом */
-        align-items: center;    /* Центрируем эти сложенные карточки */
-        gap: 20px;
-    }
-    
-    /* 2. Сама карточка: делаем ее широкой */
-    .pricing-card {
-        width: 90%; /* Занимает 90% ширины экрана */
-        max-width: 400px; /* Ограничиваем, чтобы не растягивалась на больших планшетах */
-    }
+    /* 1. Секция с ценами: складываем карточки вертикально */
+    .pricing-cards-container {
+        flex-direction: column; /* Элементы теперь складываются друг под другом */
+        align-items: center;    /* Центрируем эти сложенные карточки */
+        gap: 20px;
+    }
+      
+    /* 2. Сама карточка: делаем ее широкой */
+    .pricing-card {
+        width: 90%; /* Занимает 90% ширины экрана */
+        max-width: 400px; /* Ограничиваем, чтобы не растягивалась на больших планшетах */
+    }
 }
 /* Конец стилей для секции Цен */
-        /* Base Styles */
-        :root {
-            --shopify-green: #008060;
-            --shopify-light-green: #96bf48;
-            --shopify-dark: #212326;
-            --shopify-light: #f4f6f8;
-            --text-dark: #212326;
-            --text-light: #6b7177;
-            --white: #ffffff;
-            --gray-100: #f9fafb;
-            --gray-200: #f4f6f8;
-            --gray-300: #e3e8ee;
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--shopify-green);
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--shopify-light-green);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5 {
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            margin-bottom: 24px;
-        }
-        
-        h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 20px;
-        }
-        
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            margin-bottom: 16px;
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background-color: var(--shopify-green);
-            color: var(--white);
-        }
-        
-        .btn-primary:hover {
-            background-color: #006e52;
-            color: var(--white);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--shopify-green);
-            border: 2px solid var(--shopify-green);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--shopify-green);
-            color: var(--white);
-        }
-        
-        .btn-lg {
-            padding: 16px 32px;
-            font-size: 18px;
-        }
-        
-        /* Header */
-        header {
-            padding: 20px 0;
-            background-color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--shopify-green);
-        }
-        
-        .logo svg {
-            height: 32px;
-            margin-right: 8px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 32px;
-        }
-        
-        nav a {
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-        
-        nav a:hover {
-            color: var(--shopify-green);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 100px 0;
-            background-color: var(--gray-100);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(var(--gray-300) 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.5;
-            z-index: 0;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .hero-text {
-            max-width: 600px;
-        }
-        
-        .hero-text h1 {
-            margin-bottom: 24px;
-        }
-        
-        .hero-text p {
-            font-size: 18px;
-            color: var(--text-light);
-            margin-bottom: 32px;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-        }
-        
-        .hero-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .hero-image img {
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            max-width: 100%;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 100px 0;
-            background-color: var(--white);
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 64px;
-        }
-        
-        .section-header p {
-            font-size: 18px;
-            color: var(--text-light);
-            margin-top: 16px;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-        
-        .feature-card {
-            background-color: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            background-color: rgba(0, 128, 96, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: var(--shopify-green);
-            font-size: 24px;
-        }
-        
-        .feature-card h3 {
-            margin-bottom: 16px;
-            font-size: 20px;
-        }
-        
-        .feature-card p {
-            color: var(--text-light);
-        }
-        
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            background-color: var(--gray-100);
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-        
-        .about-image img {
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .about-text h2 {
-            margin-bottom: 24px;
-        }
-        
-        .about-text p {
-            margin-bottom: 16px;
-            color: var(--text-light);
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 32px;
-        }
-        
-        .stat {
-            padding: 16px;
-            background-color: var(--white);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--shopify-green);
-            margin-bottom: 8px;
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-        
-        /* CTA Section */
-        .cta {
-            padding: 100px 0;
-            background-color: var(--shopify-dark);
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .cta-content {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .cta h2 {
-            margin-bottom: 24px;
-        }
-        
-        .cta p {
-            margin-bottom: 32px;
-            font-size: 18px;
-            color: var(--gray-300);
-        }
-        
-        .affiliate-button {
-            background-color: var(--shopify-green);
-            color: var(--white);
-            font-size: 18px;
-            padding: 16px 32px;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .affiliate-button:hover {
-            background-color: #006e52;
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--shopify-dark);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 64px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .footer-logo {
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--white);
-        }
-        
-        .footer-logo svg {
-            height: 32px;
-            margin-right: 8px;
-        }
-        
-        .footer-about p {
-            color: var(--gray-300);
-            margin-bottom: 24px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 16px;
-        }
-        
-        .social-links a {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--shopify-green);
-        }
-        
-        .footer-nav h4 {
-            font-size: 16px;
-            margin-bottom: 24px;
-            color: var(--white);
-        }
-        
-        .footer-nav ul {
-            list-style: none;
-        }
-        
-        .footer-nav ul li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-nav ul li a {
-            color: var(--gray-300);
-            transition: color 0.3s ease;
-        }
-        
-        .footer-nav ul li a:hover {
-            color: var(--white);
-        }
-        
-        .footer-bottom {
-            padding-top: 30px;
-            text-align: center;
-            color: var(--gray-300);
-            font-size: 14px;
-        }
-        
-        .footer-bottom p {
-            margin-bottom: 10px;
-        }
-        
-        /* Disclosure Banner */
-        .disclosure {
-            background-color: rgba(255,255,255,0.1);
-            padding: 10px 0;
-            font-size: 12px;
-            color: var(--gray-300);
-            text-align: center;
-        }
-        
-        /* Media Queries */
-        @media (max-width: 992px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-text {
-                max-width: 100%;
-            }
-            
-            .hero-buttons {
-                justify-content: center;
-            }
-            
-            .hero-image {
-                order: -1;
-                margin-bottom: 40px;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-              
-               <div class="header-logo-container">
-    <img src="https://i.postimg.cc/XYqdfz0k/Gemini-Generated-Image-c4hxlmc4hxlmc4hx-(1)-(1).png" 
-         alt="Official Shopify Partner Dropshipping Guide Logo" 
-         style="max-height: 40px; width: auto; vertical-align: middle;">
-</div>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#cta">Start Now</a></li>
-                    </ul>
-                </nav>
-                <button class="mobile-menu-btn">☰</button>
-            </div>
-        </div>
-    </header>
-       <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Build Your Dream Online Store with Shopify</h1>
-                    <p>Start, grow, and scale your business with the leading e-commerce platform trusted by millions of entrepreneurs worldwide.</p>
-                    <div class="hero-buttons">
-                        <a href="https://shopify.pxf.io/YR7XLm" class="btn btn-primary btn-lg">Start Free Trial</a>
-                        <a href="#features" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://i.postimg.cc/3RcHDz8Z/Gemini-Generated-Image-rdxxcmrdxxcmrdxx.png" alt="Shopify Dashboard">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Everything You Need to Sell Online</h2>
-                <p>Shopify offers a complete commerce platform that lets you start, grow, and manage your business.</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🛍️</div>
-                    <h3>Beautiful Online Store</h3>
-                    <p>Create a customized online store with our powerful and flexible shopping cart. Mobile-optimized designs, secure checkout, and multiple languages supported.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Omnichannel Selling</h3>
-                    <p>Sell across multiple sales channels, including social media, marketplaces, and in person with Shopify POS.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Analytics & Reporting</h3>
-                    <p>Get detailed analytics about your store performance, customer behavior, and marketing campaign results.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Marketing Tools</h3>
-                    <p>Grow your business with built-in SEO features, social media integration, and targeted email marketing campaigns.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Reliable Security</h3>
-                    <p>Shopify is PCI compliant and includes SSL certificates, fraud analysis, and secure payment gateways.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Global Commerce</h3>
-                    <p>Sell in multiple currencies, configure international pricing, and manage global shipping and taxes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Why Choose Shopify?</h2>
-                    <p>Shopify is the all-in-one commerce platform to start, run, and grow a business. With Shopify, you get more than just an ecommerce website—you get everything you need to sell online, on social media, or in person.</p>
-                    <p>Since 2006, Shopify has helped over 1.7 million businesses in more than 175 countries generate over $200 billion in sales. From small boutiques to global brands, Shopify powers businesses of all sizes.</p>
-                    
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="stat-number">1.7M+</div>
-                            <div class="stat-label">Active Merchants</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">175+</div>
-                            <div class="stat-label">Countries</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">$200B+</div>
-                            <div class="stat-label">In Sales</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://fal.pr-cy.ru/files/b/panda/ETn-qcxB3MVBFdWRQYw0o.png" alt="Shopify Store">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section id="cta" class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Online Business?</h2>
-                <p>Try Shopify free for 3 days. No credit card required.</p>
-                <!-- Replace with your affiliate link -->
-                <a href="https://shopify.pxf.io/YR7XLm" class="affiliate-button" target="_blank">Start Your Free Trial</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Disclosure Banner -->
-    <div class="disclosure">
-        <div class="container">
-<section id="pricing" class="pricing-section">
-  <section id="pricing" class="pricing-section">
-    <div class="container">
-        <h2>Start Your Dream Business: Transparent Shopify Pricing</h2>
-        <p>Start risk-free and explore the platform's potential!</p>
-<section id="dropshipping-faq-modern" style="padding: 25px; background-color: #f8f8f8; border-radius: 12px; margin-top: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-    
-    <h2 style="color: #008060; text-align: center; margin-bottom: 35px; font-weight: 700;">
-        Часто Задаваемые Вопросы (FAQ) для Быстрого Старта
-    </h2>
-    
-    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee;">
-        <details>
-            <summary style="font-weight: bold; padding: 10px 0; cursor: pointer; color: #333; outline: none; transition: color 0.2s;">
-                🚀 1. Что такое дропшиппинг и почему Shopify идеален для старта?
-            </summary>
-            <p style="padding: 10px 15px 15px 15px; line-height: 1.6; background-color: #fff; border-left: 3px solid #008060;">
-                Дропшиппинг — это метод розничной торговли, при котором продавец не хранит товары на складе, а поставщик отправляет их напрямую клиенту. Shopify идеален для этого благодаря простоте настройки, масштабируемости и прямой интеграции с поставщиками.
-            </p>
-        </details>
-    </div>
-
-    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee;">
-        <details>
-            <summary style="font-weight: bold; padding: 10px 0; cursor: pointer; color: #333; outline: none; transition: color 0.2s;">
-                💰 2. Сколько денег нужно для старта дропшиппинг-магазина?
-            </summary>
-            <p style="padding: 10px 15px 15px 15px; line-height: 1.6; background-color: #fff; border-left: 3px solid #008060;">
-                Начать можно с минимальными вложениями (менее $100), покрывающими домен и подписку Shopify. Основные траты приходятся на тестирование товаров и рекламный трафик.
-            </p>
-        </details>
-    </div>
-
-    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee;">
-        <details>
-            <summary style="font-weight: bold; padding: 10px 0; cursor: pointer; color: #333; outline: none; transition: color 0.2s;">
-                🏭 3. Как найти надежных поставщиков?
-            </summary>
-            <p style="padding: 10px 15px 15px 15px; line-height: 1.6; background-color: #fff; border-left: 3px solid #008060;">
-                Используйте специализированные приложения Shopify (например, Dsers) или устанавливайте прямые контакты с производителями, чтобы гарантировать качество и сроки доставки.
-            </p>
-        </details>
-    </div>
-    
-    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee;">
-        <details>
-            <summary style="font-weight: bold; padding: 10px 0; cursor: pointer; color: #333; outline: none; transition: color 0.2s;">
-                📈 4. Как быстро я увижу первую прибыль?
-            </summary>
-            <p style="padding: 10px 15px 15px 15px; line-height: 1.6; background-color: #fff; border-left: 3px solid #008060;">
-                Первая продажа возможна в течение 48 часов. Стабильная прибыль обычно достигается за 4-6 недель после оптимизации рекламных кампаний и выбора выигрышного товара.
-            </p>
-        </details>
-    </div>
-
-    <div style="margin-bottom: 15px;">
-        <details>
-            <summary style="font-weight: bold; padding: 10px 0; cursor: pointer; color: #333; outline: none; transition: color 0.2s;">
-                🌍 5. Как бороться с долгим сроком доставки?
-            </summary>
-            <p style="padding: 10px 15px 15px 15px; line-height: 1.6; background-color: #fff; border-left: 3px solid #008060;">
-                Решение: использовать местных поставщиков или фулфилмент-центры в целевом регионе. Всегда предоставляйте клиентам четкую информацию о сроках доставки.
-            </p>
-        </details>
-    </div>
-    
-</section>
-        <div class="pricing-cards-container">
-            
-            <div class="pricing-card basic">
-                <h3>Basic Shopify</h3>
-                <p class="price-main">$25 / month</p>
-                <p class="trial-info">First 3 days free + 3 months for only $1/mo.*</p>
-                
-                <ul>
-                    <li><span style="color: #008060;">&#10004;</span> 2 staff accounts</li>
-                    <li><span style="color: #008060;">&#10004;</span> Unlimited products</li>
-                    <li><span style="color: #008060;">&#10004;</span> Basic reports</li>
-                    <li><span style="color: #008060;">&#10004;</span> 24/7 support</li>
-                </ul>
-                
-                <a href="[ВАША ПАРТНЕРСКАЯ ССЫЛКА SHOPIFY]" target="_blank" class="cta-button primary">Start with Basic</a>
-            </div>
-
-            <div class="pricing-card standard">
-                <h3>Shopify (Standard)</h3>
-                <p class="price-main">$65 / month</p>
-                <p class="trial-info">Ideal for a growing business</p>
-                
-                <ul>
-                    <li><span style="color: #008060;">&#10004;</span> 5 staff accounts</li>
-                    <li><span style="color: #008060;">&#10004;</span> Professional reports</li>
-                    <li><span style="color: #008060;">&#10004;</span> Lower transaction fees</li>
-                    <li><span style="color: #008060;">&#10004;</span> International markets</li>
-                </ul>
-                
-                <a href="https://shopify.pxf.io/YR7XLm" target="_blank" class="cta-button secondary">Learn More</a>
-            </div>
-        </div>
-
-        <p class="note">*The $1/mo. price applies to the first three months of subscription following the trial period.</p>
-    </div>
-</section>
-
-            
-            <p>this siteis an affiliate program.</p>
-        </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-             <div class="footer-logo">
- 
-    <img src="https://i.postimg.cc/9fbgNknv/Gemini-Generated-Image-nu93wmnu93wmnu93-(1)-(1).png" 
-         alt="Shopify Partner Logo" 
-         style="max-height: 64px; width: auto;">
-</div>  
- </div>
-                    <p>We help businesses of all sizes launch, grow, and scale with Shopify. Our team of experts provides guidance and support for your e-commerce journey.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">f</a>
-                        <a href="#" aria-label="Twitter">t</a>
-                        <a href="#" aria-label="Instagram">i</a>
-                        <a href="#" aria-label="LinkedIn">in</a>
-                    </div>
-                </div>
-                
-                <div class="footer-nav">
-                    <h4>Platform</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                       
-                    </ul>
-                </div>
-         
-           <div class="footer-nav">
-    <h4>Resources</h4>
-    <ul>
-        <li><a href="blog.html">Blog</a></li>
-      
-    </ul>
-</div>
-              
-<div class="footer-nav">
-    <h4>Company</h4>
-    <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-of-service.html">Terms of Service</a></li>
-    </ul>
-</div>
-
-<div class="footer-bottom">
-    <p>&copy; 2025 Shopify Partner Site. All rights reserved.</p>
-    <p>"Shopify" and associated logos are trademarks of Shopify Inc.</p>
-</div>
-</body>
-</html>
+        /* Base Styles */
+        :root {
+            --shopify-green: #008060;
+            --shopify-light-green: #96bf48;
+            --shopify-dark: #212326;
+            --shopify-light: #f4f6f8;
+            --text-dark: #212326;
+            --text-light: #6b7177;
+            --white: #ffffff;
+            --gray-100: #f9fafb;
+            --gray-200: #f4f6f8;
+            --gray-300: #e3e8ee;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--shopify-green);
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--shopify-light-green);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 24px;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 16px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--shopify-green);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: #006e52;
+            color: var(--white);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--shopify-green);
+            border: 2px solid var(--shopify-green);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--shopify-green);
+            color: var(--white);
+        }
+        
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 18px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            background-color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display:
