@@ -1,250 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>Shopify Dropshipping Guide 2024: A-Z Step-by-Step Tutorial</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* Стили для секции Цен (Pricing) - ОБЕСПЕЧИВАЮТ ВЫРАВНИВАНИЕ В РЯД. */
-/* -------------------------------------------------------------------------- */
-.pricing-section {
-    padding: 60px 20px;
-    background-color: #f8f8f8; /* Светлый фон для контраста */
-    text-align: center;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Полное A-Z руководство по Shopify Dropshipping 2024. Узнайте, как начать свой бизнес, найти продукты и настроить магазин пошагово.">
+    <meta name="keywords" content="shopify dropshipping, дропшиппинг 2024, как начать dropshipping, руководство shopify, пошаговый план">
+    <title>Shopify Dropshipping Guide 2024: A-Z Step-by-Step Tutorial</title>
 
-.pricing-cards-container {
-    display: flex;       /* КРИТИЧНО: выстраивает карточки в ряд */
-    justify-content: center; /* Центрирует контейнер с карточками */
-    gap: 30px; /* Расстояние между карточками */
-    margin-top: 40px;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* -------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------- */
+        /* Стили для секции Цен (Pricing) - ОБЕСПЕЧИВАЮТ ВЫРАВНИВАНИЕ В РЯД. */
+        /* -------------------------------------------------------------------------- */
+        .pricing-section {
+            padding: 60px 20px;
+            background-color: #f8f8f8; /* Светлый фон для контраста */
+            text-align: center;
+        }
 
-.pricing-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px; /* Скругленные углы */
-    padding: 30px;
-    width: 300px; /* КРИТИЧНО: задает фиксированную ширину карточки */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Легкая тень */
-    transition: transform 0.3s; /* Анимация при наведении */
-}
+        .pricing-cards-container {
+            display: flex;       /* КРИТИЧНО: выстраивает карточки в ряд */
+            justify-content: center; /* Центрирует контейнер с карточками */
+            gap: 30px; /* Расстояние между карточками */
+            margin-top: 40px;
+        }
 
-.pricing-card:hover {
-    transform: translateY(-5px); /* Приподнимает карточку при наведении */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
+        .pricing-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px; /* Скругленные углы */
+            padding: 30px;
+            width: 300px; /* КРИТИЧНО: задает фиксированную ширину карточки */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Легкая тень */
+            transition: transform 0.3s; /* Анимация при наведении */
+        }
 
-.pricing-card h3 {
-    color: #008060;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+        .pricing-card:hover {
+            transform: translateY(-5px); /* Приподнимает карточку при наведении */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
 
-.price-main {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
+        .pricing-card h3 {
+            color: #008060;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-.trial-info {
-    color: #e30000;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
+        .price-main {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
 
-.pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-    text-align: left;
-}
+        .trial-info {
+            color: #e30000;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
 
-.pricing-card ul li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #eee;
-    color: #555;
-}
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            text-align: left;
+        }
 
-/* Стили кнопок (уже были в общих стилях, но для наглядности) */
-.cta-button {
-    display: block;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
+        .pricing-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            color: #555;
+        }
 
-.cta-button.primary {
-    background-color: #008060;
-    color: white;
-}
+        /* Стили кнопок (уже были в общих стилях, но для наглядности) */
+        .cta-button {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
 
-.cta-button.primary:hover {
-    background-color: #006b52;
-}
-        /* КОРРЕКЦИЯ ЦВЕТА ЗАГОЛОВКА СЕКЦИИ ЦЕН */
-#pricing h1, #pricing h2, #pricing p {
-    color: #1a1a1a !important; /* Устанавливаем темно-серый цвет (почти черный) и делаем его приоритетным */
-}
+        .cta-button.primary {
+            background-color: #008060;
+            color: white;
+        }
 
-/* На всякий случай, если слово Shopify - это отдельный span: */
-#pricing span {
-    color: #1a1a1a !important;
-}
-        /* -------------------------------------------------------------------------- */
-/* МОБИЛЬНАЯ АДАПТАЦИЯ (Media Query) */
-/* -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-    /* 1. Секция с ценами: складываем карточки вертикально */
-    .pricing-cards-container {
-        flex-direction: column; /* Элементы теперь складываются друг под другом */
-        align-items: center;    /* Центрируем эти сложенные карточки */
-        gap: 20px;
-    }
-      
-    /* 2. Сама карточка: делаем ее широкой */
-    .pricing-card {
-        width: 90%; /* Занимает 90% ширины экрана */
-        max-width: 400px; /* Ограничиваем, чтобы не растягивалась на больших планшетах */
-    }
-}
-/* Конец стилей для секции Цен */
-        /* Base Styles */
-        :root {
-            --shopify-green: #008060;
-            --shopify-light-green: #96bf48;
-            --shopify-dark: #212326;
-            --shopify-light: #f4f6f8;
-            --text-dark: #212326;
-            --text-light: #6b7177;
-            --white: #ffffff;
-            --gray-100: #f9fafb;
-            --gray-200: #f4f6f8;
-            --gray-300: #e3e8ee;
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--shopify-green);
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--shopify-light-green);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5 {
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            margin-bottom: 24px;
-        }
-        
-        h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 20px;
-        }
-        
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            margin-bottom: 16px;
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background-color: var(--shopify-green);
-            color: var(--white);
-        }
-        
-        .btn-primary:hover {
-            background-color: #006e52;
-            color: var(--white);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--shopify-green);
-            border: 2px solid var(--shopify-green);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--shopify-green);
-            color: var(--white);
-        }
-        
-        .btn-lg {
-            padding: 16px 32px;
-            font-size: 18px;
-        }
-        
-        /* Header */
-        header {
-            padding: 20px 0;
-            background-color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display:
+        .cta-button.primary:hover {
+            background-color: #006b52;
+        }
+        
+        /* КОРРЕКЦИЯ ЦВЕТА ЗАГОЛОВКА СЕКЦИИ ЦЕН */
+        #pricing h1, #pricing h2, #pricing p {
+            color: #1a1a1a !important; /* Устанавливаем темно-серый цвет (почти черный) и делаем его приоритетным */
+        }
+
+        /* На всякий случай, если слово Shopify - это отдельный span: */
+        #pricing span {
+            color: #1a1a1a !important;
+        }
+        
+        /* -------------------------------------------------------------------------- */
+        /* МОБИЛЬНАЯ АДАПТАЦИЯ (Media Query) */
+        /* -------------------------------------------------------------------------- */
+        @media (max-width: 768px) {
+            /* 1. Секция с ценами: складываем карточки вертикально */
+            .pricing-cards-container {
+                flex-direction: column; /* Элементы теперь складываются друг под другом */
+                align-items: center;    /* Центрируем эти сложенные карточки */
+                gap: 20px;
+            }
+            
+            /* 2. Сама карточка: делаем ее широкой */
+            .pricing-card {
+                width: 90%; /* Занимает 90% ширины экрана */
+                max-width: 400px; /* Ограничиваем, чтобы не растягивалась на больших планшетах */
+            }
+        }
+        /* Конец стилей для секции Цен */
+        
+        /* Base Styles */
+        :root {
+            --shopify-green: #008060;
+            --shopify-light-green: #96bf48;
+            --shopify-dark: #212326;
+            --shopify-light: #f4f6f8;
+            --text-dark: #212326;
+            --text-light: #6b7177;
+            --white: #ffffff;
+            --gray-100: #f9fafb;
+            --gray-200: #f4f6f8;
+            --gray-300: #e3e8ee;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--shopify-green);
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--shopify-light-green);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 24px;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 16px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--shopify-green);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: #006e52;
+            color: var(--white);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--shopify-green);
+            border: 2px solid var(--shopify-green);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--shopify-green);
+            color: var(--white);
+        }
+        
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 18px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            background-color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--shopify-dark);
+        }
+
+        .logo span {
+            color: var(--shopify-green);
+            margin-left: 5px;
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        /* Hero Section */
+        #hero {
+            background-color: var(--gray-100);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Content Section (Steps) */
+        .section {
+            padding: 60px 0;
+        }
+        
+        #steps {
+            background-color: var(--white);
+        }
+        
+        .step-card {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+        
+        .step-card:nth-child(even) {
+            flex-direction: row-reverse; /* Меняем порядок для четных блоков */
+        }
+        
+        .step-info {
+            flex: 1;
+        }
+        
+        .step-image {
+            flex: 1;
+            padding: 20px;
+            background-color: var(--gray-200);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            color: var(--shopify-green);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        /* Pricing Section (Она же #pricing) */
+        #pricing {
+            /* Использует классы .pricing-section, .pricing-cards-container и т.д. определенные вверху */
+            padding: 80px 0; /* Добавляем отступы */
+            background-color: var(--gray-200);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--shopify-dark);
+            color: var(--gray-300);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            margin-top: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--gray-300);
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--shopify-light-green);
+        }
+        
+        /* Media Queries for Responsiveness */
+        @media (max-width: 992px) {
+            .step-card, .step-card:nth-child(even) {
+                flex-direction: column;
+            }
+            .step-image {
+                max-width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                Shopify<span>Guide</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Начало</a></li>
+                    <li><a href="#steps">Пошаговая инструкция</a></li>
+                    <li><a href="#pricing">Тарифы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="section">
+        <div class="container hero-content">
+            <h1>Shopify Dropshipping 2024: Ваш A-Z Гид к Успеху</h1>
+            <p>Узнайте, как начать свой прибыльный dropshipping-бизнес с нуля. Полное, пошаговое руководство по выбору ниши, поиску продуктов и настройке магазина Shopify.</p>
+            <div class="hero-cta">
+                <a href="#steps" class="btn btn-primary btn-lg">Начать Сейчас</a>
+                <a href="#pricing" class="btn btn-outline btn-lg">Тарифы Shopify</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps" class="section">
+        <div class="container">
+            <h2>8 Шагов для Запуска Успешного Dropshipping-Бизнеса</h2>
+            
+            <div class="step-card">
+                <div class="step-info">
+                    <div class="step-number">Шаг 1</div>
+                    <h3>Выбор Ниши и Анализ Рынка</h3>
+                    <p>Определите, что вы будете продавать. Ищите товары с высокой маржой, низкой конкуренцией и "вау-эффектом". Используйте инструменты для анализа трендов.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://via.placeholder.com/500x300?text=Niche+Research" alt="Изображение анализа рынка и выбора ниши">
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-info">
+                    <div class="step-number">Шаг 2</div>
+                    <h3>Регистрация и Настройка Магазина на Shopify</h3>
+                    <p>Пройдите быструю регистрацию, выберите доменное имя и установите профессиональную тему. Мы покажем, какие настройки критичны для dropshipping-бизнеса.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://via.placeholder.com/500x300?text=Shopify+Setup" alt="Изображение настройки магазина Shopify">
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <div class="step-info">
+                    <div class="step-number">Шаг 3</div>
+                    <h3>Поиск Надежных Поставщиков и Продуктов</h3>
+                    <p>Используйте сервисы вроде AliExpress или специализированные приложения. Главное – скорость доставки и качество товара. Мы дадим список проверенных поставщиков.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://via.placeholder.com/500x300?text=Product+Sourcing" alt="Изображение поиска продуктов для дропшиппинга">
+                </div>
+            </div>
+            
+            <div class="step-card">
+                <div class="step-info">
+                    <div class="step-number">Шаг 4</div>
+                    <h3>Оптимизация Продуктовых Страниц (SEO)</h3>
+                    <p>Напишите убедительные описания, сделайте качественные фото и оптимизируйте заголовки для поисковых систем. Это ключевой шаг для бесплатного трафика.</p>
+                </div>
+                <div class="step-image">
+                    <img src="https://via.placeholder.com/500x300?text=SEO+Optimization" alt="Изображение оптимизации продуктовых страниц">
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>Выберите свой план Shopify</h2>
+            <p>Начните с 3 дней бесплатного доступа, а затем платите всего $1/месяц за первые 3 месяца. Ваш путь к успеху начинается здесь.</p>
+
+            <div class="pricing-cards-container">
+                
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price-main">$29</div>
+                    <p>/месяц</p>
+                    <div class="trial-info">3 дня бесплатно, затем $1/мес. за 3 месяца</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 2 Сотрудника</li>
+                        <li><i class="fas fa-check"></i> Неограниченное количество товаров</li>
+                        <li><i class="fas fa-check"></i> Базовые отчеты</li>
+                        <li><i class="fas fa-check"></i> Скидочные коды</li>
+                    </ul>
+                    <a href="https://www.shopify.com/free-trial" target="_blank" class="cta-button primary">Начать пробный период</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Shopify</h3>
+                    <div class="price-main">$79</div>
+                    <p>/месяц</p>
+                    <div class="trial-info">3 дня бесплатно, затем $1/мес. за 3 месяца</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 5 Сотрудников</li>
+                        <li><i class="fas fa-check"></i> Профессиональные отчеты</li>
+                        <li><i class="fas fa-check"></i> Подарочные карты</li>
+                        <li><i class="fas fa-check"></i> Низкая комиссия за транзакции</li>
+                    </ul>
+                    <a href="https://www.shopify.com/free-trial" target="_blank" class="cta-button primary">Начать пробный период</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Advanced</h3>
+                    <div class="price-main">$299</div>
+                    <p>/месяц</p>
+                    <div class="trial-info">3 дня бесплатно, затем $1/мес. за 3 месяца</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 15 Сотрудников</li>
+                        <li><i class="fas fa-check"></i> Расширенные отчеты</li>
+                        <li><i class="fas fa-check"></i> Калькулятор сторонних тарифов</li>
+                        <li><i class="fas fa-check"></i> Самая низкая комиссия</li>
+                    </ul>
+                    <a href="https://www.shopify.com/free-trial" target="_blank" class="cta-button primary">Начать пробный период</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shopify Dropshipping Guide. Все права защищены. </p>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
