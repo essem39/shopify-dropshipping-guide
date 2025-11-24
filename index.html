@@ -20,6 +20,7 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: #ffffff;
         }
 
         .container {
@@ -28,7 +29,7 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
+        /* Header */
         header {
             background: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -48,7 +49,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #5d4e75;
+            color: #2563eb;
         }
 
         .nav-links {
@@ -65,7 +66,7 @@
         }
 
         .nav-links a:hover {
-            color: #5d4e75;
+            color: #2563eb;
         }
 
         .nav-buttons {
@@ -73,183 +74,183 @@
             gap: 1rem;
         }
 
-        .login-button {
-            padding: 0.5rem 1rem;
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
             text-decoration: none;
-            color: #333;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            cursor: pointer;
             transition: all 0.3s;
+            display: inline-block;
+            text-align: center;
         }
 
-        .login-button:hover {
-            background: #f5f5f5;
-        }
-
-        .cta-button {
-            padding: 0.5rem 1.5rem;
-            background: #5d4e75;
+        .btn-primary {
+            background: #22c55e;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: background 0.3s;
         }
 
-        .cta-button:hover {
-            background: #4a3d5f;
+        .btn-primary:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #22c55e;
+            border: 2px solid #22c55e;
+        }
+
+        .btn-secondary:hover {
+            background: #22c55e;
+            color: white;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 120px 0 80px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            color: #1e293b;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        /* Image Slider Styles */
-        .slider-container {
-            margin: 3rem 0;
-            position: relative;
-            max-width: 800px;
+            font-size: 1.25rem;
+            color: #64748b;
+            margin-bottom: 3rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .slider {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        /* Slider */
+        .slider-container {
+            background: #ffffff;
+            padding: 60px 0;
+            margin-bottom: 0;
         }
 
-        .slider-wrapper {
+        .slider {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .slides {
             display: flex;
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.5s ease;
         }
 
         .slide {
             min-width: 100%;
-            position: relative;
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 40px;
         }
 
         .slide img {
-            width: 100%;
-            height: 400px;
+            width: 300px;
+            height: 200px;
             object-fit: cover;
-            display: block;
+            border-radius: 10px;
+            margin-right: 40px;
         }
 
-        .slide-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-            padding: 2rem;
-            text-align: left;
-        }
-
-        .slide-title {
+        .slide-content h3 {
             font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
         }
 
-        .slide-description {
-            font-size: 1rem;
-            opacity: 0.9;
+        .slide-content p {
+            color: #64748b;
+            line-height: 1.6;
         }
 
-        /* Slider Navigation */
         .slider-nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.2);
-            border: none;
+            background: #22c55e;
             color: white;
-            font-size: 1.5rem;
-            padding: 1rem;
-            cursor: pointer;
+            border: none;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
             transition: all 0.3s;
-            backdrop-filter: blur(10px);
         }
 
         .slider-nav:hover {
-            background: rgba(255,255,255,0.3);
+            background: #16a34a;
+            transform: translateY(-50%) scale(1.1);
         }
 
-        .slider-nav.prev {
+        .prev {
             left: 20px;
         }
 
-        .slider-nav.next {
+        .next {
             right: 20px;
         }
 
-        /* Slider Dots */
         .slider-dots {
             display: flex;
             justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            gap: 10px;
+            margin-top: 30px;
         }
 
         .dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.5);
+            background: #cbd5e1;
             cursor: pointer;
             transition: all 0.3s;
         }
 
         .dot.active {
-            background: white;
+            background: #22c55e;
             transform: scale(1.2);
         }
 
         /* Features Section */
         .features {
+            background: #f8fafc;
             padding: 80px 0;
-            background: #f8f9fa;
         }
 
         .features h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: #1e293b;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
         .feature-card {
             background: white;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s;
         }
 
@@ -258,22 +259,23 @@
         }
 
         .feature-icon {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
 
         .feature-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: #1e293b;
         }
 
         .feature-card p {
-            color: #666;
+            color: #64748b;
         }
 
         /* Pricing Section */
         .pricing {
+            background: white;
             padding: 80px 0;
         }
 
@@ -281,146 +283,172 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: #1e293b;
         }
 
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .pricing-card {
             background: white;
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
             padding: 2rem;
             text-align: center;
-            position: relative;
             transition: all 0.3s;
         }
 
         .pricing-card:hover {
-            border-color: #5d4e75;
+            border-color: #22c55e;
             transform: translateY(-5px);
         }
 
         .pricing-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
         }
 
         .price {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #5d4e75;
+            color: #22c55e;
             margin-bottom: 0.5rem;
         }
 
-        .trial-info {
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        .features-list {
+        .pricing-features {
             list-style: none;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
 
-        .features-list li {
+        .pricing-features li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #f0f0f0;
+            color: #64748b;
+        }
+
+        .pricing-features li:before {
+            content: "✓";
+            color: #22c55e;
+            font-weight: bold;
+            margin-right: 0.5rem;
         }
 
         /* Guide Section */
         .guide {
+            background: #f8fafc;
             padding: 80px 0;
-            background: #f8f9fa;
         }
 
         .guide h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: #1e293b;
         }
 
-        .guide-steps {
+        .accordion {
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .step {
+        .accordion-item {
             background: white;
             margin-bottom: 1rem;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .step-header {
-            padding: 1.5rem;
-            background: #5d4e75;
+        .accordion-header {
+            background: #22c55e;
             color: white;
+            padding: 1.5rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-weight: 600;
         }
 
-        .step-content {
+        .accordion-header:hover {
+            background: #16a34a;
+        }
+
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-content.active {
             padding: 2rem;
-            display: none;
+            max-height: 1000px;
         }
 
-        .step-content.active {
-            display: block;
-        }
-
-        .step-content ul {
+        .accordion-content ul {
             margin: 1rem 0;
-            padding-left: 2rem;
+            padding-left: 1.5rem;
         }
 
-        .step-content li {
-            margin-bottom: 0.5rem;
+        .accordion-content li {
+            margin: 0.5rem 0;
+            color: #64748b;
         }
 
         /* CTA Section */
-        .final-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .cta {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
             color: white;
             padding: 80px 0;
             text-align: center;
         }
 
-        .final-cta h2 {
+        .cta h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .final-cta p {
-            font-size: 1.2rem;
+        .cta p {
+            font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
 
+        .btn-white {
+            background: white;
+            color: #22c55e;
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+        }
+
+        .btn-white:hover {
+            background: #f8fafc;
+            transform: translateY(-2px);
+        }
+
         /* Footer */
         footer {
-            background: #333;
+            background: #1e293b;
             color: white;
-            padding: 40px 0 20px;
+            padding: 60px 0 30px;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
 
         .footer-section h3 {
             margin-bottom: 1rem;
+            color: #22c55e;
         }
 
         .footer-section ul {
@@ -428,38 +456,48 @@
         }
 
         .footer-section a {
-            color: #ccc;
+            color: #cbd5e1;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: #22c55e;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #555;
-            color: #ccc;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
-            .slider-nav {
-                display: none;
+            .slide {
+                flex-direction: column;
+                text-align: center;
             }
 
             .slide img {
-                height: 250px;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -474,8 +512,8 @@
                 <li><a href="#guide">Step-by-Step Guide</a></li>
             </ul>
             <div class="nav-buttons">
-                <a href="#" class="login-button">Log In</a>
-                <a href="#" class="cta-button">Start Free Trial</a>
+                <a href="#" class="btn btn-secondary">Log In</a>
+                <a href="#" class="btn btn-primary">Start Free Trial</a>
             </div>
         </nav>
     </header>
@@ -485,42 +523,42 @@
             <h1>The Complete Shopify Dropshipping Blueprint</h1>
             <p>Everything you need to build a profitable dropshipping business with Shopify in 2025</p>
             
-            <!-- Современный слайдер -->
             <div class="slider-container">
                 <div class="slider">
-                    <div class="slider-wrapper">
+                    <div class="slides" id="slides">
                         <div class="slide">
-                            <img src="https://via.placeholder.com/800x400/667eea/ffffff?text=https://growthcenter.shopify.com/cdn/shop/files/IMG_e3a737ce-c984-49f8-87dc-d5cf51297e0c.png?v=1699288988&width=750" alt="Dropshipping Success Story 1">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop" alt="Dropshipping Success Story 1">
                             <div class="slide-content">
-                                <div class="slide-title">Успешные истории дропшиппинга</div>
-                                <div class="slide-description">Узнайте, как предприниматели строят прибыльные магазины</div>
+                                <h3>Успешные истории дропшиппинга</h3>
+                                <p>Узнайте, как предприниматели строят прибыльные магазины</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="https://via.placeholder.com/800x400/764ba2/ffffff?text=Здесь+ваша+ссылка+для+картинки+2" alt="Shopify Store Setup">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" alt="Shopify Store Setup">
                             <div class="slide-content">
-                                <div class="slide-title">Настройка магазина Shopify</div>
-                                <div class="slide-description">Пошаговое руководство по созданию профессионального магазина</div>
+                                <h3>Настройка магазина Shopify</h3>
+                                <p>Пошаговое руководство по созданию профессионального магазина</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="https://via.placeholder.com/800x400/5d4e75/ffffff?text=Здесь+ваша+ссылка+для+картинки+3" alt="Product Research">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop" alt="Product Research">
                             <div class="slide-content">
-                                <div class="slide-title">Исследование продуктов</div>
-                                <div class="slide-description">Найдите выигрышные продукты для вашего магазина</div>
+                                <h3>Исследование продуктов</h3>
+                                <p>Найдите выигрышные продукты для вашего магазина</p>
                             </div>
                         </div>
                         <div class="slide">
-                            <img src="https://via.placeholder.com/800x400/4a3d5f/ffffff?text=Здесь+ваша+ссылка+для+картинки+4" alt="Marketing Strategies">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=200&fit=crop" alt="Marketing Strategies">
                             <div class="slide-content">
-                                <div class="slide-title">Маркетинговые стратегии</div>
-                                <div class="slide-description">Эффективные способы привлечения клиентов</div>
+                                <h3>Маркетинговые стратегии</h3>
+                                <p>Эффективные способы привлечения клиентов</p>
                             </div>
                         </div>
                     </div>
                     <button class="slider-nav prev" onclick="changeSlide(-1)">❮</button>
                     <button class="slider-nav next" onclick="changeSlide(1)">❯</button>
                 </div>
+                
                 <div class="slider-dots">
                     <span class="dot active" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -529,7 +567,7 @@
                 </div>
             </div>
 
-            <a href="https://shopify.pxf.io/Bnr4Jq" class="cta-button">Start Your Free Trial</a>
+            <a href="#" class="btn btn-primary">Start Your Free Trial</a>
         </div>
     </section>
 
@@ -578,21 +616,21 @@
                 <div class="pricing-card">
                     <h3>Basic</h3>
                     <div class="price">$39/mo</div>
-                    <div class="trial-info">3-day free trial</div>
-                    <ul class="features-list">
+                    <p>3-day free trial</p>
+                    <ul class="pricing-features">
                         <li>Online store with ecommerce features</li>
                         <li>Unlimited product listings</li>
                         <li>24/7 customer support</li>
                         <li>2 staff accounts</li>
                         <li>Up to 1,000 inventory locations</li>
                     </ul>
-                    <a href="#" class="cta-button">Start Basic Plan</a>
+                    <a href="#" class="btn btn-primary">Start Basic Plan</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Shopify</h3>
                     <div class="price">$105/mo</div>
-                    <div class="trial-info">3-day free trial</div>
-                    <ul class="features-list">
+                    <p>3-day free trial</p>
+                    <ul class="pricing-features">
                         <li>Everything in Basic</li>
                         <li>Professional reports</li>
                         <li>5 staff accounts</li>
@@ -600,13 +638,13 @@
                         <li>International pricing</li>
                         <li>Up to 1,000 inventory locations</li>
                     </ul>
-                    <a href="#" class="cta-button">Start Shopify Plan</a>
+                    <a href="#" class="btn btn-primary">Start Shopify Plan</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Advanced</h3>
                     <div class="price">$399/mo</div>
-                    <div class="trial-info">3-day free trial</div>
-                    <ul class="features-list">
+                    <p>3-day free trial</p>
+                    <ul class="pricing-features">
                         <li>Everything in Shopify plan</li>
                         <li>Advanced reports</li>
                         <li>15 staff accounts</li>
@@ -614,7 +652,7 @@
                         <li>Custom report builder</li>
                         <li>Up to 1,000 inventory locations</li>
                     </ul>
-                    <a href="#" class="cta-button">Start Advanced Plan</a>
+                    <a href="#" class="btn btn-primary">Start Advanced Plan</a>
                 </div>
             </div>
         </div>
@@ -623,13 +661,13 @@
     <section class="guide" id="guide">
         <div class="container">
             <h2>Step-by-Step Dropshipping Guide</h2>
-            <div class="guide-steps">
-                <div class="step">
-                    <div class="step-header" onclick="toggleStep(this)">
-                        <span>Step 1: Set Up Your Shopify Store</span>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Step 1: Set Up Your Shopify Store
                         <span>+</span>
                     </div>
-                    <div class="step-content">
+                    <div class="accordion-content">
                         <p>Begin by signing up for Shopify's 3-day free trial. Choose a theme that matches your brand vision and customize it to stand out from competitors. Focus on creating a clean, professional look that builds customer trust.</p>
                         <p><strong>Key steps:</strong></p>
                         <ul>
@@ -638,16 +676,16 @@
                             <li>Set up essential pages (About, Contact, FAQ, etc.)</li>
                             <li>Configure payment processors</li>
                         </ul>
-                        <a href="#" class="cta-button">Start your Shopify store now</a>
+                        <a href="#" class="btn btn-primary">Start your Shopify store now</a>
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-header" onclick="toggleStep(this)">
-                        <span>Step 2: Find Your Niche and Products</span>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Step 2: Find Your Niche and Products
                         <span>+</span>
                     </div>
-                    <div class="step-content">
+                    <div class="accordion-content">
                         <p>Research profitable niches with high demand and lower competition. Consider product criteria like solving a specific problem, having profit margin potential of at least 30%, and being non-seasonal to ensure year-round sales.</p>
                         <p><strong>Effective methods for finding winning products:</strong></p>
                         <ul>
@@ -659,12 +697,12 @@
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-header" onclick="toggleStep(this)">
-                        <span>Step 3: Connect with Suppliers</span>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Step 3: Connect with Suppliers
                         <span>+</span>
                     </div>
-                    <div class="step-content">
+                    <div class="accordion-content">
                         <p>Find reliable suppliers that offer quality products, fast shipping, and good communication. Install a dropshipping app from the Shopify App Store to connect with suppliers and import products to your store.</p>
                         <p><strong>Recommended dropshipping apps:</strong></p>
                         <ul>
@@ -676,12 +714,12 @@
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-header" onclick="toggleStep(this)">
-                        <span>Step 4: Optimize Your Store for Conversions</span>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Step 4: Optimize Your Store for Conversions
                         <span>+</span>
                     </div>
-                    <div class="step-content">
+                    <div class="accordion-content">
                         <p>Create a shopping experience that converts visitors into customers. Focus on professional product photography, compelling descriptions, and trust elements throughout your store.</p>
                         <p><strong>Essential optimization elements:</strong></p>
                         <ul>
@@ -695,12 +733,12 @@
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-header" onclick="toggleStep(this)">
-                        <span>Step 5: Market Your Dropshipping Store</span>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Step 5: Market Your Dropshipping Store
                         <span>+</span>
                     </div>
-                    <div class="step-content">
+                    <div class="accordion-content">
                         <p>Drive targeted traffic to your store using multiple marketing channels. Create a marketing strategy that includes both paid and organic methods.</p>
                         <ul>
                             <li>Facebook and Instagram ads</li>
@@ -713,12 +751,12 @@
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-header" onclick="toggleStep(this)">
-                        <span>Step 6: Fulfill Orders and Provide Customer Support</span>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Step 6: Fulfill Orders and Provide Customer Support
                         <span>+</span>
                     </div>
-                    <div class="step-content">
+                    <div class="accordion-content">
                         <p>Once orders come in, efficiently process them through your chosen dropshipping app. Keep customers informed throughout the shipping process and provide exceptional support.</p>
                         <p><strong>Best practices:</strong></p>
                         <ul>
@@ -731,12 +769,12 @@
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-header" onclick="toggleStep(this)">
-                        <span>Step 7: Scale Your Business</span>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Step 7: Scale Your Business
                         <span>+</span>
                     </div>
-                    <div class="step-content">
+                    <div class="accordion-content">
                         <p>Once you've established a profitable store, it's time to scale. Reinvest profits into expanding your product range, improving marketing, and automating processes.</p>
                         <ul>
                             <li>Add complementary products to increase average order value</li>
@@ -752,11 +790,11 @@
         </div>
     </section>
 
-    <section class="final-cta">
+    <section class="cta">
         <div class="container">
             <h2>Ready to Start Your Dropshipping Journey?</h2>
             <p>Join over 2 million entrepreneurs who are building successful businesses with Shopify. Start your 3-day free trial today.</p>
-            <a href="#" class="cta-button">Launch Your Shopify Store</a>
+            <a href="#" class="btn btn-white">Launch Your Shopify Store</a>
         </div>
     </section>
 
@@ -796,15 +834,13 @@
 
     <script>
         let currentSlideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
+        const slides = document.getElementById('slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
         const dots = document.querySelectorAll('.dot');
-        const totalSlides = slides.length;
 
         function showSlide(index) {
-            const wrapper = document.querySelector('.slider-wrapper');
-            wrapper.style.transform = `translateX(-${index * 100}%)`;
+            slides.style.transform = `translateX(-${index * 100}%)`;
             
-            // Update dots
             dots.forEach(dot => dot.classList.remove('active'));
             dots[index].classList.add('active');
         }
@@ -826,47 +862,32 @@
             showSlide(currentSlideIndex);
         }
 
-        // Auto-play slider
-        setInterval(() => {
-            changeSlide(1);
-        }, 5000);
-
-        // Step accordion functionality
-        function toggleStep(header) {
-            const content = header.nextElementSibling;
-            const icon = header.querySelector('span:last-child');
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('span');
             
             if (content.classList.contains('active')) {
                 content.classList.remove('active');
                 icon.textContent = '+';
             } else {
-                // Close all other steps
-                document.querySelectorAll('.step-content').forEach(step => {
-                    step.classList.remove('active');
+                // Close all other accordion items
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    item.classList.remove('active');
                 });
-                document.querySelectorAll('.step-header span:last-child').forEach(span => {
+                document.querySelectorAll('.accordion-header span').forEach(span => {
                     span.textContent = '+';
                 });
                 
-                // Open current step
+                // Open current item
                 content.classList.add('active');
                 icon.textContent = '-';
             }
         }
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        // Auto-slide functionality
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
     </script>
 </body>
 </html>
