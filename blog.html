@@ -23,6 +23,50 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+
+        /* -------------------------------------- */
+        /* ИСПРАВЛЕННЫЕ СТИЛИ ДЛЯ ГОРИЗОНТАЛЬНОГО МЕНЮ */
+        /* -------------------------------------- */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        nav.container {
+            display: flex; /* Выравнивание основных элементов (лого, ссылки, кнопки) */
+            justify-content: space-between; 
+            align-items: center; 
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex; /* КЛЮЧ: Выравнивание элементов списка (<li>) горизонтально */
+            gap: 30px; 
+            margin-right: auto; 
+            margin-left: 30px;
+        }
+        
+        .nav-links li a {
+            text-decoration: none;
+            color: #333; 
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 10px 0;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #667eea;
+        }
+        
+        .nav-buttons {
+            display: flex; 
+            gap: 15px;
+        }
+        /* -------------------------------------- */
+        /* -------------------------------------- */
         
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -673,7 +717,7 @@
 <body>
     <header>
     <nav class="container">
-        <img src="RSVuhv7K-h1k-I27t-ked.jpg" alt="Storelines" style="height: 80px; width: auto; object-fit: contain; vertical-align: middle;">
+        <img src="RSVuhv7K-h1k-I27t-ked (1).png" alt="Storelines" style="height: 80px; width: auto; object-fit: contain; vertical-align: middle;">
         <ul class="nav-links">
             <li><a href="index.html#features">Features</a></li>
             <li><a href="index.html#pricing">Pricing</a></li>
@@ -685,7 +729,6 @@
         </div>
     </nav>
 </header>
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
@@ -707,7 +750,6 @@
         </div>
     </section>
 
-    <!-- Video Section -->
     <section id="video" class="video-container">
         <div class="container">
             <div class="video-wrapper">
@@ -730,7 +772,6 @@
         </div>
     </section>
 
-    <!-- Introduction Section -->
     <section class="intro-section">
         <div class="container">
             <div class="intro-grid">
@@ -773,7 +814,6 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
     <section class="benefits-section">
         <div class="container">
             <h2 class="section-title">Why Choose Shopify?</h2>
@@ -818,7 +858,6 @@
         </div>
     </section>
 
-    <!-- Steps Section -->
     <section class="steps-section">
         <div class="container">
             <h2 class="section-title">Your Step-by-Step Success Path</h2>
@@ -898,7 +937,6 @@
         </div>
     </section>
 
-    <!-- Problems Section -->
     <section class="problems-section">
         <div class="container">
             <h2 class="section-title">Avoid These Common Pitfalls</h2>
@@ -964,66 +1002,68 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section id="guide" class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Ready to Start Your Dropshipping Empire?</h2>
+                <h2 class="cta-title">Ready to Launch Your Store?</h2>
                 <p class="cta-subtitle">
-                    Get instant access to our comprehensive Shopify Dropshipping Blueprint and start building your profitable online business today.
+                    Join the fastest-growing e-commerce platform today and get access to exclusive tools and resources to help you succeed.
                 </p>
-                
+
                 <div class="cta-features">
                     <div class="cta-features-grid">
                         <div class="cta-feature-item">
-                            <div class="cta-feature-number">200+</div>
-                            <div class="cta-feature-label">Pages of Content</div>
-                        </div>
-                        <div class="cta-feature-item">
-                            <div class="cta-feature-number">50+</div>
-                            <div class="cta-feature-label">Video Tutorials</div>
+                            <div class="cta-feature-number">14</div>
+                            <div class="cta-feature-label">Days Free Trial</div>
                         </div>
                         <div class="cta-feature-item">
                             <div class="cta-feature-number">24/7</div>
-                            <div class="cta-feature-label">Community Support</div>
+                            <div class="cta-feature-label">Expert Support</div>
+                        </div>
+                        <div class="cta-feature-item">
+                            <div class="cta-feature-number">1.7M+</div>
+                            <div class="cta-feature-label">Active Stores</div>
                         </div>
                     </div>
                 </div>
-                
-                <a href="https://essem39.github.io/shopify-dropshipping-guide/" class="cta-button" target="_blank">
-                    🚀 Get Complete Blueprint Now →
+
+                <a href="https://shopify.pxf.io/Bnr4Jq" class="cta-button">
+                    Start Your Free Trial Now!
                 </a>
-                
+
                 <div class="cta-guarantees">
                     <div class="guarantee-item">
-                        <span>✅</span>
-                        <span>Instant Download</span>
+                        <span style="color: #f1c40f;">✔️</span> No Credit Card Required
                     </div>
                     <div class="guarantee-item">
-                        <span>✅</span>
-                        <span>30-Day Money Back</span>
-                    </div>
-                    <div class="guarantee-item">
-                        <span>✅</span>
-                        <span>Lifetime Updates</span>
+                        <span style="color: #f1c40f;">✔️</span> Cancel Anytime
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-  <footer>
-    <div class="container">
-        <div class="footer-content">
-            <p>&copy; 2025 Storelines. All rights reserved. | Built on Shopify</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>
+                    &copy; 2025 Storelines. All rights reserved. 
+                    <a href="index.html" style="color: #667eea; text-decoration: none; margin-left: 15px;">Главная</a>
+                    <a href="trends-2026.html" style="color: #667eea; text-decoration: none; margin-left: 15px;">trends</a>
+                    <a href="blog.html" style="color: #667eea; text-decoration: none; margin-left: 15px;">Blog</a>
+                </p>
+                <div class="rating">
+                    <span>Trusted by thousands of entrepreneurs:</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span>(5.0/5.0)</span>
+                </div>
+            </div>
         </div>
-        <div class="rating">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span> (5.0 based on 500+ reviews)
-        </div>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="index.html">Home</a>
-        </div>
-    </div>
-</footer>
+    </footer>
+
 </body>
 </html>
